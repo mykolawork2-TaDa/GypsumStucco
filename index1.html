@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lepnina Côte d'Azur — Гіпсова ліпнина</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <!-- ============================================================
+       TOP BAR
+  ============================================================ -->
+  <div class="topbar">
+    <span>
+      <a href="mailto:info@lepnina-cotedazur.ua">info@lepnina-cotedazur.ua</a>
+    </span>
+    <div class="topbar__right">
+      <a href="tel:+380996812205">+38 (099) 681-22-05</a>
+      <button class="lang-btn active" id="btn-uk" onclick="setLang('uk')">UA</button>
+      <button class="lang-btn"        id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header>
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <span class="logo__main">Lepnina Côte d'Azur</span>
+        <span class="logo__sub">
+          <span class="uk">Гіпсова ліпнина ручної роботи</span>
+          <span class="en">Handcrafted Plaster Mouldings</span>
+        </span>
+      </a>
+
+      <!-- Nav -->
+      <nav>
+        <div class="nav-item">
+          <a href="#">
+            <span class="uk">Каталог</span>
+            <span class="en">Catalogue</span>
+          </a>
+          <div class="dropdown">
+            <a href="#categories"><span class="uk">Карнизи з готовими кутами</span><span class="en">Cornices with ready corners</span></a>
+            <a href="#categories"><span class="uk">Карнизи зі вставкою</span><span class="en">Cornices with inserts</span></a>
+            <a href="#categories"><span class="uk">Карнизи з підсвіткою</span><span class="en">Cornices with hidden lighting</span></a>
+            <a href="#categories"><span class="uk">Фризи з гіпсу</span><span class="en">Plaster friezes</span></a>
+            <a href="#categories"><span class="uk">Розетки стельові</span><span class="en">Ceiling rosettes</span></a>
+            <a href="#categories"><span class="uk">Колони та пілястри</span><span class="en">Columns & pilasters</span></a>
+            <a href="#categories"><span class="uk">Скульптури та статуї</span><span class="en">Sculptures & statues</span></a>
+            <a href="#categories"><span class="uk">Декоративні рамки</span><span class="en">Decorative frames</span></a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#why">
+            <span class="uk">Про нас</span>
+            <span class="en">About</span>
+          </a>
+        </div>
+        <div class="nav-item">
+          <a href="#contact">
+            <span class="uk">Контакти</span>
+            <span class="en">Contact</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <a href="tel:+380996812205" class="header-phone">+38 (099) 681-22-05</a>
+        <button class="btn-call">
+          <span class="uk">Замовити дзвінок</span>
+          <span class="en">Call me back</span>
+        </button>
+        <button class="hamburger" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MOBILE MENU
+  ============================================================ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="menuClose">×</button>
+    <nav class="mobile-nav">
+      <a href="#categories" onclick="closeMobileMenu()"><span class="uk">Каталог ліпнини</span><span class="en">Catalogue</span></a>
+      <a href="#why"        onclick="closeMobileMenu()"><span class="uk">Про нас</span><span class="en">About us</span></a>
+      <a href="#contact"    onclick="closeMobileMenu()"><span class="uk">Контакти</span><span class="en">Contact</span></a>
+      <a href="tel:+380996812205">+38 (099) 681-22-05</a>
+    </nav>
+  </div>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">
+        <span class="uk">Lepnina Côte d'Azur — ліпнина з душею</span>
+        <span class="en">Lepnina Côte d'Azur — mouldings with soul</span>
+      </p>
+      <h1 class="hero__title">
+        <span class="uk">Гіпсова ліпнина<br><em>ручної роботи</em></span>
+        <span class="en">Handcrafted<br><em>plaster mouldings</em></span>
+      </h1>
+      <p class="hero__desc">
+        <span class="uk">Класична архітектурна ліпнина для інтер'єрів будь-якого стилю. Виготовляємо та встановлюємо по всій Україні.</span>
+        <span class="en">Classical architectural mouldings for any interior style. Manufacturing and installation across Ukraine.</span>
+      </p>
+      <div class="hero__cta">
+        <a href="#categories" class="btn-primary">
+          <span class="uk">Переглянути каталог</span>
+          <span class="en">Browse catalogue</span>
+        </a>
+        <a href="#contact" class="btn-outline">
+          <span class="uk">Замовити консультацію</span>
+          <span class="en">Book a consultation</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES STRIP
+  ============================================================ -->
+  <div class="features-strip">
+    <div class="features-strip__inner">
+      <div class="feature-item">
+        <div class="feature-item__icon">✦</div>
+        <div class="feature-item__title">
+          <span class="uk">Ручна робота</span>
+          <span class="en">Handcrafted</span>
+        </div>
+        <p class="feature-item__desc">
+          <span class="uk">Кожен виріб виготовляється майстрами вручну з натурального гіпсу</span>
+          <span class="en">Every piece is hand-made by skilled artisans from natural gypsum</span>
+        </p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">✦</div>
+        <div class="feature-item__title">
+          <span class="uk">Широкий асортимент</span>
+          <span class="en">Wide range</span>
+        </div>
+        <p class="feature-item__desc">
+          <span class="uk">Понад 500 моделей карнизів, розеток, колон, рамок та декорів</span>
+          <span class="en">Over 500 models of cornices, rosettes, columns, frames and décors</span>
+        </p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">✦</div>
+        <div class="feature-item__title">
+          <span class="uk">Доставка по Україні</span>
+          <span class="en">Delivery across Ukraine</span>
+        </div>
+        <p class="feature-item__desc">
+          <span class="uk">Надійна упаковка та швидка доставка у будь-яке місто України</span>
+          <span class="en">Secure packaging and fast delivery to any city in Ukraine</span>
+        </p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">✦</div>
+        <div class="feature-item__title">
+          <span class="uk">Індивідуальне замовлення</span>
+          <span class="en">Custom orders</span>
+        </div>
+        <p class="feature-item__desc">
+          <span class="uk">Виготовляємо унікальні вироби за ескізами та кресленнями замовника</span>
+          <span class="en">We produce unique pieces from your sketches and drawings</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CATEGORIES
+  ============================================================ -->
+  <section id="categories" class="section">
+    <div class="section-header reveal">
+      <p class="section-header__eyebrow">
+        <span class="uk">Наш асортимент</span>
+        <span class="en">Our range</span>
+      </p>
+      <h2 class="section-header__title">
+        <span class="uk">Каталог <em>гіпсової ліпнини</em></span>
+        <span class="en">Catalogue of <em>plaster mouldings</em></span>
+      </h2>
+      <span class="section-header__line"></span>
+    </div>
+
+    <div class="cat-grid">
+
+      <!-- Card template — repeated per category -->
+
+      <div class="cat-card reveal">
+        <div class="cat-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1582046464296-febe27fca0c0?w=600&q=75" alt="Карнизи" loading="lazy" />
+          <span class="cat-card__badge">
+            <span class="uk">Популярне</span><span class="en">Popular</span>
+          </span>
+        </div>
+        <div class="cat-card__body">
+          <div>
+            <h3 class="cat-card__title"><span class="uk">Карнизи з готовими кутами</span><span class="en">Cornices with ready corners</span></h3>
+            <p class="cat-card__desc"><span class="uk">Зручний монтаж — кути вже включені в комплект поставки</span><span class="en">Easy installation — corners already included in the set</span></p>
+          </div>
+          <a href="#" class="cat-card__link"><span class="uk">Переглянути</span><span class="en">View all</span></a>
+        </div>
+      </div>
+
+      <div class="cat-card reveal">
+        <div class="cat-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=75" alt="Карнизи зі вставкою" loading="lazy" />
+        </div>
+        <div class="cat-card__body">
+          <div>
+            <h3 class="cat-card__title"><span class="uk">Карнизи зі вставкою</span><span class="en">Cornices with inserts</span></h3>
+            <p class="cat-card__desc"><span class="uk">Декоративна вставка надає виробу особливої витонченості</span><span class="en">Decorative inserts give a unique elegance to the piece</span></p>
+          </div>
+          <a href="#" class="cat-card__link"><span class="uk">Переглянути</span><span class="en">View all</span></a>
+        </div>
+      </div>
+
+      <div class="cat-card reveal">
+        <div class="cat-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75" alt="Підсвітка" loading="lazy" />
+        </div>
+        <div class="cat-card__body">
+          <div>
+            <h3 class="cat-card__title"><span class="uk">Карнизи з прихованим освітленням</span><span class="en">Cornices with hidden lighting</span></h3>
+            <p class="cat-card__desc"><span class="uk">Поєднання класичної ліпнини та сучасного LED-освітлення</span><span class="en">Combining classic mouldings with modern LED lighting</span></p>
+          </div>
+          <a href="#" class="cat-card__link"><span class="uk">Переглянути</span><span class="en">View all</span></a>
+        </div>
+      </div>
+
+      <div class="cat-card reveal">
+        <div class="cat-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=75" alt="Розетки" loading="lazy" />
+          <span class="cat-card__badge">
+            <span class="uk">Новинка</span><span class="en">New</span>
+          </span>
+        </div>
+        <div class="cat-card__body">
+          <div>
+            <h3 class="cat-card__title"><span class="uk">Розетки стельові з гіпсу</span><span class="en">Plaster ceiling rosettes</span></h3>
+            <p class="cat-card__desc"><span class="uk">Класичні та сучасні форми для будь-якого стилю інтер'єру</span><span class="en">Classic and modern shapes for any interior style</span></p>
+          </div>
+          <a href="#" class="cat-card__link"><span class="uk">Переглянути</span><span class="en">View all</span></a>
+        </div>
+      </div>
+
+      <div class="cat-card reveal">
+        <div class="cat-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&q=75" alt="Колони" loading="lazy" />
+        </div>
+        <div class="cat-card__body">
+          <div>
+            <h3 class="cat-card__title"><span class="uk">Колони з гіпсу</span><span class="en">Plaster columns</span></h3>
+            <p class="cat-card__desc"><span class="uk">Дорійські, іонічні та коринфські ордери; різні висоти та діаметри</span><span class="en">Doric, Ionic and Corinthian orders; various heights and diameters</span></p>
+          </div>
+          <a href="#" class="cat-card__link"><span class="uk">Переглянути</span><span class="en">View all</span></a>
+        </div>
+      </div>
+
+      <div class="cat-card reveal">
+        <div class="cat-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=75" alt="Рамки" loading="lazy" />
+        </div>
+        <div class="cat-card__body">
+          <div>
+            <h3 class="cat-card__title"><span class="uk">Декоративні рамки</span><span class="en">Decorative frames</span></h3>
+            <p class="cat-card__desc"><span class="uk">Оформлення дверних прорізів, стінових панелей та дзеркал</span><span class="en">Framing for door openings, wall panels and mirrors</span></p>
+          </div>
+          <a href="#" class="cat-card__link"><span class="uk">Переглянути</span><span class="en">View all</span></a>
+        </div>
+      </div>
+
+      <div class="cat-card reveal">
+        <div class="cat-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=75" alt="Скульптури" loading="lazy" />
+        </div>
+        <div class="cat-card__body">
+          <div>
+            <h3 class="cat-card__title"><span class="uk">Скульптури та статуї</span><span class="en">Sculptures & statues</span></h3>
+            <p class="cat-card__desc"><span class="uk">Антропоморфні та анімалістичні форми для садиб і інтер'єрів</span><span class="en">Anthropomorphic and animal forms for estates and interiors</span></p>
+          </div>
+          <a href="#" class="cat-card__link"><span class="uk">Переглянути</span><span class="en">View all</span></a>
+        </div>
+      </div>
+
+      <div class="cat-card reveal">
+        <div class="cat-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1600566752734-2a0cd26e6f3c?w=600&q=75" alt="Фризи" loading="lazy" />
+        </div>
+        <div class="cat-card__body">
+          <div>
+            <h3 class="cat-card__title"><span class="uk">Фризи та молдинги</span><span class="en">Friezes & mouldings</span></h3>
+            <p class="cat-card__desc"><span class="uk">Горизонтальні орнаментальні смуги — акцент будь-якого простору</span><span class="en">Horizontal ornamental strips — an accent for any space</span></p>
+          </div>
+          <a href="#" class="cat-card__link"><span class="uk">Переглянути</span><span class="en">View all</span></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY US
+  ============================================================ -->
+  <section id="why" class="why-section">
+    <div class="why-inner">
+      <div class="why-image">
+        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80" alt="майстер за роботою" />
+        <div class="why-image__accent"></div>
+      </div>
+      <div class="why-content reveal">
+        <p class="section-header__eyebrow">
+          <span class="uk">Чому обирають нас</span>
+          <span class="en">Why choose us</span>
+        </p>
+        <h2 class="section-header__title" style="text-align:left; margin-bottom:0;">
+          <span class="uk">Якість, перевірена <em>часом</em></span>
+          <span class="en">Quality proven <em>by time</em></span>
+        </h2>
+        <div class="why-list">
+          <div class="why-item">
+            <span class="why-item__num">01</span>
+            <div class="why-item__text">
+              <h4><span class="uk">Натуральний гіпс</span><span class="en">Natural gypsum</span></h4>
+              <p><span class="uk">Використовуємо лише сертифікований будівельний гіпс найвищого сорту без шкідливих домішок.</span><span class="en">We use only certified top-grade construction gypsum with no harmful additives.</span></p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-item__num">02</span>
+            <div class="why-item__text">
+              <h4><span class="uk">Досвід понад 15 років</span><span class="en">Over 15 years of experience</span></h4>
+              <p><span class="uk">Наші майстри мають великий досвід виготовлення та встановлення архітектурного декору.</span><span class="en">Our craftsmen have extensive experience in manufacturing and installing architectural décor.</span></p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-item__num">03</span>
+            <div class="why-item__text">
+              <h4><span class="uk">Індивідуальний підхід</span><span class="en">Individual approach</span></h4>
+              <p><span class="uk">Допоможемо підібрати вироби під стиль вашого інтер'єру та підготуємо точний кошторис.</span><span class="en">We help you select pieces for your interior style and prepare an accurate estimate.</span></p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-item__num">04</span>
+            <div class="why-item__text">
+              <h4><span class="uk">Гарантія якості</span><span class="en">Quality guarantee</span></h4>
+              <p><span class="uk">Надаємо гарантію на всі вироби та встановлюємо безкоштовно у разі виявлення дефектів.</span><span class="en">We guarantee all products and replace free of charge if any defect is found.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT BANNER
+  ============================================================ -->
+  <section id="contact" class="contact-banner">
+    <div class="contact-banner__inner reveal">
+      <h2 class="contact-banner__title">
+        <span class="uk">Готові <em>допомогти</em> з вибором</span>
+        <span class="en">Ready to <em>help</em> you choose</span>
+      </h2>
+      <p class="contact-banner__sub">
+        <span class="uk">Залиште свій номер — ми зателефонуємо та безкоштовно проконсультуємо</span>
+        <span class="en">Leave your number — we'll call and consult you for free</span>
+      </p>
+      <a href="tel:+380996812205" class="contact-banner__phone">+38 (099) 681-22-05</a>
+
+      <!-- Quick form -->
+      <div class="contact-form">
+        <input type="text" placeholder="Ім'я / Name"   id="cf-name"  autocomplete="name" />
+        <input type="tel"  placeholder="Телефон / Phone" id="cf-phone" autocomplete="tel" />
+        <input type="email" placeholder="Email (необов'язково)" id="cf-email" autocomplete="email" />
+        <button class="btn-submit" onclick="openSendModal()">
+          <span class="uk">Замовити дзвінок</span>
+          <span class="en">Request a call</span>
+        </button>
+      </div>
+
+      <!-- Direct contact shortcuts -->
+      <div class="contact-shortcuts">
+        <a href="https://t.me/YOUR_TG_USERNAME" target="_blank" class="shortcut shortcut--tg">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram
+        </a>
+        <a href="viber://chat?number=%2B380996812205" class="shortcut shortcut--vb">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C5.1 0 .8 4.2.8 10.3c0 3.4 1.5 6.4 4 8.3v3.4l3.2-1.8c.8.2 1.6.3 2.4.3 6.3 0 10.6-4.2 10.6-10.2C21 4.2 17.7 0 11.4 0zm1.1 13.7l-2.7-2.9-5.2 2.9 5.7-6.1 2.8 2.9 5.1-2.9-5.7 6.1z"/></svg>
+          Viber
+        </a>
+        <a href="mailto:info@lepnina-cotedazur.ua" class="shortcut shortcut--em">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+        <a href="https://wa.me/380996812205" target="_blank" class="shortcut shortcut--wa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SEND MODAL
+  ============================================================ -->
+  <div class="modal-overlay" id="sendModal" onclick="closeSendModal(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeSendModal(null, true)">×</button>
+
+      <div class="modal-icon">✉</div>
+      <h3 class="modal-title">
+        <span class="uk">Як відправити заявку?</span>
+        <span class="en">How to send your request?</span>
+      </h3>
+      <p class="modal-sub" id="modal-preview"></p>
+
+      <div class="modal-options">
+        <!-- Telegram -->
+        <button class="modal-btn modal-btn--tg" onclick="sendViaTelegram()">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          <span>
+            <strong>Telegram</strong>
+            <small><span class="uk">Відправити в чат-бот</span><span class="en">Send to chatbot</span></small>
+          </span>
+        </button>
+
+        <!-- Email -->
+        <button class="modal-btn modal-btn--em" onclick="sendViaEmail()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>
+            <strong>Email</strong>
+            <small>info@lepnina-cotedazur.ua</small>
+          </span>
+        </button>
+
+        <!-- Viber -->
+        <button class="modal-btn modal-btn--vb" onclick="sendViaViber()">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M11.4 0C5.1 0 .8 4.2.8 10.3c0 3.4 1.5 6.4 4 8.3v3.4l3.2-1.8c.8.2 1.6.3 2.4.3 6.3 0 10.6-4.2 10.6-10.2C21 4.2 17.7 0 11.4 0zm1.1 13.7l-2.7-2.9-5.2 2.9 5.7-6.1 2.8 2.9 5.1-2.9-5.7 6.1z"/></svg>
+          <span>
+            <strong>Viber</strong>
+            <small><span class="uk">Повідомлення</span><span class="en">Message</span></small>
+          </span>
+        </button>
+
+        <!-- WhatsApp -->
+        <button class="modal-btn modal-btn--wa" onclick="sendViaWhatsApp()">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          <span>
+            <strong>WhatsApp</strong>
+            <small><span class="uk">Повідомлення</span><span class="en">Message</span></small>
+          </span>
+        </button>
+      </div>
+
+      <p class="modal-note">
+        <span class="uk">💡 Telegram Bot — найшвидший спосіб. Ми відповімо протягом 5 хвилин.</span>
+        <span class="en">💡 Telegram Bot is the fastest way. We reply within 5 minutes.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-brand__name">Lepnina Côte d'Azur</div>
+          <div class="footer-brand__tagline">
+            <span class="uk">Гіпсова ліпнина ручної роботи</span>
+            <span class="en">Handcrafted plaster mouldings</span>
+          </div>
+          <p class="footer-brand__desc">
+            <span class="uk">Виготовляємо та реалізуємо гіпсову архітектурну ліпнину для оздоблення інтер'єрів. Доставка по всій Україні.</span>
+            <span class="en">We manufacture and sell architectural gypsum mouldings for interior decoration. Delivery across Ukraine.</span>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5><span class="uk">Каталог</span><span class="en">Catalogue</span></h5>
+          <ul>
+            <li><a href="#"><span class="uk">Карнизи</span><span class="en">Cornices</span></a></li>
+            <li><a href="#"><span class="uk">Розетки</span><span class="en">Rosettes</span></a></li>
+            <li><a href="#"><span class="uk">Колони</span><span class="en">Columns</span></a></li>
+            <li><a href="#"><span class="uk">Скульптури</span><span class="en">Sculptures</span></a></li>
+            <li><a href="#"><span class="uk">Рамки</span><span class="en">Frames</span></a></li>
+            <li><a href="#"><span class="uk">Фризи</span><span class="en">Friezes</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5><span class="uk">Компанія</span><span class="en">Company</span></h5>
+          <ul>
+            <li><a href="#why"><span class="uk">Про нас</span><span class="en">About us</span></a></li>
+            <li><a href="#"><span class="uk">Доставка та оплата</span><span class="en">Shipping & payment</span></a></li>
+            <li><a href="#"><span class="uk">Гарантії</span><span class="en">Guarantees</span></a></li>
+            <li><a href="#contact"><span class="uk">Контакти</span><span class="en">Contact</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5><span class="uk">Контакти</span><span class="en">Contact</span></h5>
+          <ul>
+            <li><a href="tel:+380996812205">+38 (099) 681-22-05</a></li>
+            <li><a href="mailto:info@lepnina-cotedazur.ua">info@lepnina-cotedazur.ua</a></li>
+            <li><span style="font-size:0.78rem;">
+              <span class="uk">Харків, Україна</span>
+              <span class="en">Kharkiv, Ukraine</span>
+            </span></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Lepnina Côte d'Azur</span>
+        <span>
+          <span class="uk">Розроблено з любов'ю до деталей</span>
+          <span class="en">Crafted with love for detail</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
