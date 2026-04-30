@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art de Gypse — Premium Plaster Décor</title>
+<link rel="stylesheet" href="/styles/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div id="announce"></div>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-top">
+    <div class="logo" onclick="nav('home')">Art <span>de</span> Gypse</div>
+    <div class="srch">
+      <input id="srch-input" type="text" placeholder="Search décor..." onkeydown="if(event.key==='Enter')doSearch()">
+      <button onclick="doSearch()">🔍</button>
+    </div>
+    <div class="hdr-c">
+      <span class="ph">+33 7 66 94 99 70</span>
+      <span class="em">youremail@gmail.com</span>
+    </div>
+    <button class="btn-call" onclick="openModal('modal-call')">Request a Call 📞</button>
+  </div>
+  <nav class="nav">
+    <button class="nav-cat" onclick="nav('catalog')">☰ Catalogue</button>
+    <ul class="nav-ul" id="nav-ul">
+      <li><a href="#" data-page="home" onclick="nav('home');return false">Home</a></li>
+      <li><a href="#" data-page="services" onclick="nav('services');return false">Services</a></li>
+      <li><a href="#" data-page="about" onclick="nav('about');return false">About Us</a></li>
+      <li><a href="#" data-page="gallery" onclick="nav('gallery');return false">Gallery</a></li>
+      <li><a href="#" data-page="delivery" onclick="nav('delivery');return false">Delivery</a></li>
+      <li><a href="#" data-page="news" onclick="nav('news');return false">News</a></li>
+      <li><a href="#" data-page="contact" onclick="nav('contact');return false">Contacts</a></li>
+    </ul>
+    <button class="cart-btn" onclick="toggleCart()">🛒<span class="cart-badge" id="cart-badge">0</span></button>
+  </nav>
+</header>
+
+
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo">Art <span>de</span> Gypse</div>
+      <p class="f-about">ErmitageDecor — Ukraine's leading studio for gypsum stucco and façade decoration. Over 5,000 products and 25 years of craftsmanship excellence.</p>
+    </div>
+    <div>
+      <p class="f-col-title">Information</p>
+      <ul class="f-links">
+        <li><button onclick="nav('delivery')">Payment & Delivery</button></li>
+        <li><button onclick="nav('about')">About Us</button></li>
+        <li><button onclick="nav('services')">Services</button></li>
+        <li><a href="#">Returns & Exchanges</a></li>
+        <li><a href="#">3D Showroom Tour</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-title">Catalogue</p>
+      <ul class="f-links">
+        <li><button onclick="nav('catalog')">All Products</button></li>
+        <li><a href="#">Sale Items</a></li>
+        <li><a href="#">Wholesale</a></li>
+        <li><a href="#">Custom Orders</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-title">Stay Updated</p>
+      <p class="f-sub-txt">Subscribe for promotions and news — get 5% off your first order</p>
+      <div class="f-form">
+        <input class="f-input" id="f-email" type="email" placeholder="your@email.com">
+        <button class="f-submit" onclick="subscribeEmail()">→</button>
+      </div>
+      <div class="f-socials">
+        <a href="https://www.instagram.com/_lepnina__cotedazur/" class="f-soc">📷</a>
+        <a href="#" class="f-soc">in</a>
+        <a href="#" class="f-soc">✈</a>
+      </div>
+    </div>
+  </div>
+  <div class="f-bot">
+    <p>Gypsum & Façade Stucco Décor &nbsp;·&nbsp; © 2019–2026 Art de Gypse</p>
+    <a href="#">Made by GreedPig</a>
+  </div>
+</footer>
+<script src="/scripts/script.js"></script>
+</body>
+</html>
