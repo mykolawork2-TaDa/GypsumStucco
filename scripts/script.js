@@ -72,7 +72,7 @@ function updateHero(){
   document.getElementById('heroSlides').style.transform=`translateX(-${heroIdx*100}%)`;
   document.querySelectorAll('.hero-dot').forEach((d,i)=>d.classList.toggle('active',i===heroIdx));
 }
-setInterval(()=>heroSlide(1),5000);
+setInterval(()=>heroSlide(1),7500);
 
 // ─── RENDER HOME ─────────────────────────────────────────────────
 function renderHome(){
