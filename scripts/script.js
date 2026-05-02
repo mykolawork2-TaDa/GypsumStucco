@@ -76,7 +76,7 @@ setInterval(()=>heroSlide(1),7500);
 
 // ─── RENDER HOME ─────────────────────────────────────────────────
 function renderHome(){
-  renderCatsMini();
+  //renderCatsMini();
   renderProductGrid('home-recs', PRODUCTS.slice(0,4));
   renderProductGrid('home-new', PRODUCTS.slice(4,8));
 }
@@ -325,7 +325,7 @@ function doSearch(){
 
 // ─── GALLERY ─────────────────────────────────────────────────────
 const GAL_ITEMS=[
-  {icon:'🏛',cat:'interior',label:'Living room columns — Kyiv'},
+  {icon:'/images/logo.',cat:'interior',label:'Living room columns — Kyiv'},
   {icon:'🌿',cat:'interior',label:'Cornice installation — Lviv'},
   {icon:'🏠',cat:'exterior',label:'Façade décor — Odessa'},
   {icon:'⚜️',cat:'interior',label:'Ceiling medallion — Dnipro'},

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Art de Gypse — Premium Plaster Décor</title>
-<link rel="stylesheet" href="/styles/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art de Gypse — Premium Plaster Décor</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
 <body>
 
 <!-- ANNOUNCEMENT -->
@@ -30,13 +30,13 @@
   <nav class="nav">
     <button class="nav-cat" onclick="nav('catalog')">☰ Catalogue</button>
     <ul class="nav-ul" id="nav-ul">
-      <li><a href="#" data-page="home" onclick="nav('home');return false">Home</a></li>
-      <li><a href="#" data-page="services" onclick="nav('services');return false">Services</a></li>
-      <li><a href="#" data-page="about" onclick="nav('about');return false">About Us</a></li>
-      <li><a href="#" data-page="gallery" onclick="nav('gallery');return false">Gallery</a></li>
-      <li><a href="#" data-page="delivery" onclick="nav('delivery');return false">Delivery</a></li>
-      <li><a href="#" data-page="news" onclick="nav('news');return false">News</a></li>
-      <li><a href="#" data-page="contact" onclick="nav('contact');return false">Contacts</a></li>
+      <li><a href="index.html" data-page="home" onclick="nav('home');return false">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
     </ul>
     <button class="cart-btn" onclick="toggleCart()">🛒<span class="cart-badge" id="cart-badge">0</span></button>
   </nav>
@@ -121,6 +121,6 @@
     <a href="#">Made by GreedPig</a>
   </div>
 </footer>
-<script src="/scripts/script.js"></script>
+<script src="/scripts/script.js">nav('gallery');return false;</script>
 </body>
 </html>
