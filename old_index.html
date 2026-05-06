@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Art de Gypse — Premium Plaster Décor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,8 +16,9 @@
   --sh:0 2px 24px rgba(180,150,100,.10);--sh-h:0 8px 40px rgba(180,150,100,.18);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--char);font-weight:300;line-height:1.6;cursor:default;overflow-x:hidden}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--char);font-weight:300;line-height:1.6;cursor:default}
 
+/* ─ GLOBAL ─ */
 .hidden{display:none!important}
 .page{display:none}
 .page.active{display:block}
@@ -30,20 +31,20 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 
 /* ─ HEADER ─ */
 .hdr{background:var(--warm);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;box-shadow:0 1px 12px rgba(180,150,100,.06)}
-.hdr-top{display:flex;align-items:center;justify-content:space-between;padding:14px 60px;border-bottom:1px solid var(--border);gap:16px}
-.logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;white-space:nowrap;flex-shrink:0}
+.hdr-top{display:flex;align-items:center;justify-content:space-between;padding:14px 60px;border-bottom:1px solid var(--border)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;cursor:pointer}
 .logo span{color:var(--gold)}
-.srch{display:flex;border:1px solid var(--border);border-radius:2px;overflow:hidden;background:var(--cream);flex:1;max-width:400px}
-.srch input{border:none;background:transparent;padding:8px 14px;font-size:13px;width:100%;outline:none;color:var(--char)}
-.srch button{border:none;background:var(--gold);color:#fff;padding:8px 14px;font-size:13px;transition:background .2s;white-space:nowrap}
+.srch{display:flex;border:1px solid var(--border);border-radius:2px;overflow:hidden;background:var(--cream)}
+.srch input{border:none;background:transparent;padding:8px 14px;font-size:13px;width:200px;outline:none;color:var(--char)}
+.srch button{border:none;background:var(--gold);color:#fff;padding:8px 14px;font-size:13px;transition:background .2s}
 .srch button:hover{background:var(--gold-d)}
-.hdr-c{text-align:right;flex-shrink:0}
+.hdr-c{text-align:right}
 .hdr-c .ph{display:block;font-size:15px;font-weight:500;letter-spacing:.03em}
 .hdr-c .em{display:block;font-size:12px;color:var(--stone);letter-spacing:.05em}
-.btn-call{background:transparent;border:1px solid var(--gold);color:var(--gold-d);padding:8px 18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;transition:all .25s;display:inline-block;white-space:nowrap;flex-shrink:0}
+.btn-call{background:transparent;border:1px solid var(--gold);color:var(--gold-d);padding:8px 18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;transition:all .25s;display:inline-block}
 .btn-call:hover{background:var(--gold);color:#fff}
 .nav{display:flex;align-items:center;padding:0 60px}
-.nav-cat{background:var(--char);color:#fff;padding:14px 22px;font-size:12px;letter-spacing:.15em;text-transform:uppercase;border:none;font-weight:400;transition:background .2s;margin-right:30px;white-space:nowrap}
+.nav-cat{background:var(--char);color:#fff;padding:14px 22px;font-size:12px;letter-spacing:.15em;text-transform:uppercase;border:none;font-weight:400;transition:background .2s;margin-right:30px}
 .nav-cat:hover{background:var(--gold-d)}
 .nav-ul{display:flex;list-style:none;flex:1;gap:0}
 .nav-ul a{display:block;padding:14px 12px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);transition:color .2s;position:relative;white-space:nowrap}
@@ -52,19 +53,19 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .nav-ul a:hover::after{left:12px;right:12px}
 .nav-ul a.cur{color:var(--char)}
 .nav-ul a.cur::after{left:12px;right:12px}
-.cart-btn{margin-left:auto;background:none;border:none;font-size:20px;color:var(--char);padding:10px;position:relative;transition:color .2s;flex-shrink:0}
+.cart-btn{margin-left:auto;background:none;border:none;font-size:20px;color:var(--char);padding:10px;position:relative;transition:color .2s}
 .cart-btn:hover{color:var(--gold)}
 .cart-badge{position:absolute;top:4px;right:4px;background:var(--gold);color:#fff;font-size:9px;width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600}
 
 /* ─ BUTTONS ─ */
-.btn-p{background:var(--char);color:#fff;border:none;padding:14px 32px;font-size:12px;letter-spacing:.15em;text-transform:uppercase;border-radius:2px;transition:all .25s;display:inline-block;cursor:pointer}
+.btn-p{background:var(--char);color:#fff;border:none;padding:14px 32px;font-size:12px;letter-spacing:.15em;text-transform:uppercase;border-radius:2px;transition:all .25s;display:inline-block}
 .btn-p:hover{background:var(--gold-d)}
-.btn-o{color:var(--char);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--gold-l);padding-bottom:2px;transition:color .2s;background:none;border-top:none;border-left:none;border-right:none;cursor:pointer}
+.btn-o{color:var(--char);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--gold-l);padding-bottom:2px;transition:color .2s}
 .btn-o:hover{color:var(--gold-d)}
-.btn-g{background:var(--green);color:#fff;border:none;padding:10px 22px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:background .2s;cursor:pointer}
+.btn-g{background:var(--green);color:#fff;border:none;padding:10px 22px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:background .2s}
 .btn-g:hover{background:#219a52}
 
-/* ─ SECTIONS ─ */
+/* ─ SECTION COMMON ─ */
 .sec{padding:60px}
 .sec-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px}
 .sec-lbl{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px}
@@ -80,26 +81,27 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .hs1{background:linear-gradient(135deg,#F5EDD8,#EAD9B8 40%,#D4BF98)}
 .hs2{background:linear-gradient(135deg,#E8E0D0,#D8CCBA 40%,#C4B49A)}
 .hs3{background:linear-gradient(135deg,#F0E8D5,#E0D0B8 40%,#CCBAA0)}
-.hero_slide-image {margin-left: 50px}
 .hero-orn{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:480px;height:480px;opacity:.12}
 .hero-cnt{padding:0 120px;position:relative;z-index:2;max-width:600px}
 .hero-lbl{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
 .hero-ttl{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;line-height:1.1;margin-bottom:20px}
 .hero-ttl em{font-style:italic;color:var(--gold-d)}
 .hero-dsc{font-size:14px;color:var(--stone);margin-bottom:36px;line-height:1.8;max-width:380px}
-.hero-btns{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.hero-btns{display:flex;gap:16px;align-items:center}
 .hero-nav{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
 .hero-dot{width:28px;height:2px;background:var(--stone-l);border:none;cursor:pointer;transition:all .3s}
 .hero-dot.active{background:var(--gold);width:48px}
-.hero-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.8);width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--char);transition:all .2s;z-index:10;border-radius:2px;border:none}
+.hero-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.8);border:1px solid var(--border);width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--char);transition:all .2s;z-index:10;border-radius:2px;border:none}
 .hero-arr:hover{background:#fff;color:var(--gold)}
 .ha-l{left:30px}.ha-r{right:30px}
 
 /* ─ CATS ─ */
 .cats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
 .cat-card{text-align:center;cursor:pointer}
-.cat-img{width:100%;aspect-ratio:1;background:var(--sand);border-radius:50%;overflow:hidden;margin-bottom:12px;transition:box-shadow .3s,transform .3s;border:2px solid transparent;display:flex;align-items:center;justify-content:center;color:var(--gold);position:relative}
+.cat-img{width:100%;aspect-ratio:1;background:var(--sand);border-radius:50%;overflow:hidden;margin-bottom:12px;transition:box-shadow .3s,transform .3s;border:2px solid transparent;display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--gold);position:relative}
 .cat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.cat-img .change-img-btn{position:absolute;inset:0;background:rgba(0,0,0,.4);border-radius:50%;display:none;align-items:center;justify-content:center;color:#fff;font-size:11px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border:none}
+.cat-img:hover .change-img-btn{display:flex}
 .cat-card:hover .cat-img{border-color:var(--gold-l);transform:translateY(-4px);box-shadow:var(--sh-h)}
 .cat-nm{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);transition:color .2s}
 .cat-card:hover .cat-nm{color:var(--char)}
@@ -110,6 +112,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .prod-card:hover{box-shadow:var(--sh-h);transform:translateY(-4px)}
 .prod-badge{position:absolute;top:14px;left:14px;background:var(--gold);color:#fff;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:2px;z-index:2}
 .prod-img{aspect-ratio:1;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:50px;position:relative;overflow:hidden;cursor:pointer}
+.prod-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .prod-img-overlay{position:absolute;inset:0;background:rgba(0,0,0,.35);display:none;align-items:center;justify-content:center;gap:8px;flex-direction:column}
 .prod-img:hover .prod-img-overlay{display:flex}
 .prod-img-overlay button{background:rgba(255,255,255,.9);border:none;color:var(--char);padding:6px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background .2s}
@@ -119,7 +122,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .prod-prc{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
 .prc-now{font-size:18px;font-weight:500}
 .prc-old{font-size:13px;color:var(--stone-l);text-decoration:line-through}
-.btn-add{width:100%;background:transparent;border:1px solid var(--char);color:var(--char);padding:10px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;border-radius:2px;transition:all .25s;cursor:pointer}
+.btn-add{width:100%;background:transparent;border:1px solid var(--char);color:var(--char);padding:10px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;border-radius:2px;transition:all .25s}
 .btn-add:hover{background:var(--char);color:#fff}
 .btn-add.added{background:var(--green);border-color:var(--green);color:#fff}
 
@@ -130,20 +133,21 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 #cart-panel.open{right:0}
 .cart-hdr{padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
 .cart-hdr h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300}
-.cart-close{background:none;border:none;font-size:22px;color:var(--stone);transition:color .2s;cursor:pointer}
+.cart-close{background:none;border:none;font-size:22px;color:var(--stone);transition:color .2s}
 .cart-close:hover{color:var(--char)}
 .cart-items{flex:1;overflow-y:auto;padding:20px 28px}
 .cart-empty{text-align:center;padding:60px 20px;color:var(--stone);font-size:14px}
 .cart-item{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border)}
-.ci-img{width:72px;height:72px;background:var(--sand);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:28px}
+.ci-img{width:72px;height:72px;background:var(--sand);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:28px;overflow:hidden;position:relative}
+.ci-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ci-info{flex:1}
 .ci-nm{font-size:14px;color:var(--char);margin-bottom:4px}
 .ci-prc{font-size:13px;color:var(--stone);margin-bottom:8px}
 .ci-qty{display:flex;align-items:center;gap:8px}
-.ci-qty button{width:26px;height:26px;border:1px solid var(--border);background:var(--cream);font-size:14px;border-radius:2px;transition:background .2s;cursor:pointer}
+.ci-qty button{width:26px;height:26px;border:1px solid var(--border);background:var(--cream);font-size:14px;border-radius:2px;transition:background .2s}
 .ci-qty button:hover{background:var(--sand)}
 .ci-qty span{min-width:24px;text-align:center;font-size:14px}
-.ci-del{background:none;border:none;color:var(--stone-l);font-size:16px;align-self:flex-start;transition:color .2s;cursor:pointer}
+.ci-del{background:none;border:none;color:var(--stone-l);font-size:16px;align-self:flex-start;transition:color .2s}
 .ci-del:hover{color:var(--red)}
 .cart-foot{padding:20px 28px;border-top:1px solid var(--border)}
 .cart-total{display:flex;justify-content:space-between;font-size:16px;margin-bottom:16px}
@@ -151,15 +155,15 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .cart-foot .btn-p{width:100%;text-align:center;display:block;padding:14px}
 .cart-coupon{display:flex;gap:8px;margin-bottom:16px}
 .cart-coupon input{flex:1;border:1px solid var(--border);background:var(--cream);padding:9px 12px;font-size:13px;outline:none;border-radius:2px}
-.cart-coupon button{border:1px solid var(--gold);background:transparent;color:var(--gold-d);padding:9px 14px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .2s;cursor:pointer}
+.cart-coupon button{border:1px solid var(--gold);background:transparent;color:var(--gold-d);padding:9px 14px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .2s}
 .cart-coupon button:hover{background:var(--gold);color:#fff}
 
 /* ─ MODAL ─ */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:600;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:16px}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:600;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
 .modal-overlay.open{opacity:1;pointer-events:all}
-.modal{background:var(--warm);border-radius:4px;width:min(560px,100%);max-height:90vh;overflow-y:auto;padding:40px;position:relative;transform:translateY(20px);transition:transform .3s}
+.modal{background:var(--warm);border-radius:4px;width:min(560px,92vw);max-height:90vh;overflow-y:auto;padding:40px;position:relative;transform:translateY(20px);transition:transform .3s}
 .modal-overlay.open .modal{transform:translateY(0)}
-.modal-close{position:absolute;top:18px;right:18px;background:none;border:none;font-size:20px;color:var(--stone);transition:color .2s;cursor:pointer}
+.modal-close{position:absolute;top:18px;right:18px;background:none;border:none;font-size:20px;color:var(--stone);transition:color .2s}
 .modal-close:hover{color:var(--char)}
 .modal h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;margin-bottom:24px}
 .form-row{margin-bottom:16px}
@@ -169,7 +173,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .form-row textarea{height:100px;resize:vertical}
 .form-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .msg-channels{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
-.ch-btn{padding:8px 16px;border:1px solid var(--border);background:transparent;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-radius:20px;transition:all .2s;color:var(--stone);cursor:pointer}
+.ch-btn{padding:8px 16px;border:1px solid var(--border);background:transparent;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-radius:20px;transition:all .2s;color:var(--stone)}
 .ch-btn.active{border-color:var(--gold);background:var(--gold);color:#fff}
 .msg-status{margin-top:14px;padding:12px;border-radius:2px;font-size:13px;text-align:center}
 .msg-ok{background:#e8f5e9;color:#2e7d32}
@@ -189,10 +193,16 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 
 /* ─ PRODUCT DETAIL ─ */
 .pdp-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:60px}
-.pdp-main-img{aspect-ratio:1;background:var(--sand);border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:80px;margin-bottom:12px}
+.pdp-imgs{position:relative}
+.pdp-main-img{aspect-ratio:1;background:var(--sand);border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:80px;margin-bottom:12px;position:relative}
+.pdp-main-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pdp-thumbs{display:flex;gap:8px}
-.pdp-thumb{width:70px;height:70px;background:var(--sand);border-radius:4px;border:2px solid transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:24px;transition:border-color .2s}
+.pdp-thumb{width:70px;height:70px;background:var(--sand);border-radius:4px;border:2px solid transparent;cursor:pointer;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:24px;transition:border-color .2s;position:relative}
+.pdp-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pdp-thumb.active{border-color:var(--gold)}
+.upload-zone{border:2px dashed var(--border);border-radius:4px;padding:20px;text-align:center;cursor:pointer;transition:border-color .2s;margin-top:12px}
+.upload-zone:hover{border-color:var(--gold)}
+.upload-zone p{font-size:12px;color:var(--stone);letter-spacing:.08em;text-transform:uppercase}
 .pdp-info .price-big{font-size:36px;font-weight:500;margin:12px 0}
 .pdp-info .old-p{font-size:16px;color:var(--stone-l);text-decoration:line-through;margin-left:12px}
 .pdp-info .desc{font-size:14px;color:var(--stone);line-height:1.9;margin:20px 0}
@@ -201,9 +211,57 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .pdp-specs td:first-child{color:var(--stone);width:40%}
 .qty-row{display:flex;align-items:center;gap:16px;margin:20px 0}
 .qty-ctrl{display:flex;align-items:center;border:1px solid var(--border);border-radius:2px;overflow:hidden}
-.qty-ctrl button{width:36px;height:40px;border:none;background:var(--cream);font-size:18px;transition:background .2s;cursor:pointer}
+.qty-ctrl button{width:36px;height:40px;border:none;background:var(--cream);font-size:18px;transition:background .2s}
 .qty-ctrl button:hover{background:var(--sand)}
 .qty-ctrl span{width:48px;text-align:center;font-size:16px}
+
+/* ─ CATEGORIES PAGE ─ */
+.cats-page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cat-pg-card{position:relative;border-radius:4px;overflow:hidden;height:280px;cursor:pointer;background:var(--sand);display:flex;align-items:flex-end}
+.cat-pg-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cat-pg-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,42,38,.8) 0%,transparent 60%)}
+.cat-pg-info{position:relative;z-index:2;padding:24px;color:#fff}
+.cat-pg-info h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;margin-bottom:4px}
+.cat-pg-info p{font-size:12px;opacity:.7;letter-spacing:.1em;text-transform:uppercase}
+.cat-pg-deco{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:60px;opacity:.3;z-index:1}
+
+/* ─ ABOUT PAGE ─ */
+.about-hero{background:var(--sand);padding:80px 60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.stat-box{padding:32px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;background:var(--warm)}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--gold-d)}
+.stat-lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone)}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.team-card{text-align:center}
+.team-av{width:100%;aspect-ratio:1;background:var(--sand);border-radius:4px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:60px;overflow:hidden;position:relative}
+.team-av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.team-nm{font-size:15px;font-weight:400;margin-bottom:4px}
+.team-role{font-size:12px;color:var(--stone);letter-spacing:.1em;text-transform:uppercase}
+
+/* ─ CONTACT PAGE ─ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.contact-left{padding:60px;background:var(--char);color:#fff}
+.contact-right{padding:60px;background:var(--warm)}
+.contact-left h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#fff;margin-bottom:24px}
+.cinfo-row{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px;color:rgba(255,255,255,.75);font-size:14px}
+.cinfo-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.map-frame{width:100%;height:300px;border:none;border-radius:4px;margin-top:24px;filter:grayscale(.3)}
+.social-links{display:flex;gap:12px;margin-top:28px}
+.sl-btn{width:42px;height:42px;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;border-radius:2px;font-size:15px;color:rgba(255,255,255,.6);transition:all .2s}
+.sl-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ─ GALLERY ─ */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.gal-item{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:50px}
+.gal-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item-big{grid-column:span 2;aspect-ratio:auto;height:400px}
+
+/* ─ LIGHTBOX ─ */
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:700;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+#lightbox.open{opacity:1;pointer-events:all}
+#lightbox img{max-width:90vw;max-height:85vh;object-fit:contain}
+#lightbox-close{position:absolute;top:24px;right:32px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer}
 
 /* ─ FILTERS ─ */
 .filter-bar{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;align-items:center}
@@ -223,7 +281,8 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .news-card{background:var(--warm);border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:box-shadow .3s,transform .3s;cursor:pointer}
 .news-card:hover{box-shadow:var(--sh-h);transform:translateY(-4px)}
-.news-img{height:200px;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:50px}
+.news-img{height:200px;background:var(--sand);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:50px;position:relative}
+.news-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .news-body{padding:20px}
 .news-dt{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
 .news-ttl{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:8px;line-height:1.4}
@@ -235,10 +294,27 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .breadcrumb a:hover{color:var(--gold-d)}
 .breadcrumb span{color:var(--stone-l)}
 
-/* ─ GALLERY ─ */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
-.gal-item{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:50px}
-.gal-item-big{grid-column:span 2;aspect-ratio:auto;height:400px}
+/* ─ FOOTER ─ */
+.footer{background:var(--char);color:rgba(255,255,255,.7);padding:60px 60px 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:50px;margin-bottom:50px}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:.25em;color:#fff;text-transform:uppercase;margin-bottom:16px}
+.f-logo span{color:var(--gold)}
+.f-about{font-size:13px;line-height:1.8;color:rgba(255,255,255,.5)}
+.f-col-title{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-bottom:20px;font-weight:500}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.f-links a,.f-links button{font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;background:none;border:none;text-align:left;letter-spacing:.03em;cursor:pointer;padding:0}
+.f-links a:hover,.f-links button:hover{color:var(--gold)}
+.f-sub-txt{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:16px;line-height:1.6}
+.f-form{display:flex;margin-bottom:24px}
+.f-input{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-right:none;color:#fff;padding:10px 14px;font-size:13px;outline:none}
+.f-input::placeholder{color:rgba(255,255,255,.3)}
+.f-submit{background:var(--gold);border:none;color:#fff;padding:10px 16px;font-size:14px;transition:background .2s}
+.f-submit:hover{background:var(--gold-d)}
+.f-socials{display:flex;gap:10px}
+.f-soc{width:36px;height:36px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;border-radius:2px;transition:all .2s}
+.f-soc:hover{border-color:var(--gold);color:var(--gold)}
+.f-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.3)}
+.f-bot a{color:var(--gold)}
 
 /* ─ PROMO ─ */
 .promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -258,7 +334,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .rev-auth{font-size:12px;color:var(--char);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
 
 /* ─ BENEFITS ─ */
-.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.ben-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
 .ben-icon{font-size:32px;margin-bottom:16px;display:block}
 .ben-title{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--char);margin-bottom:8px;font-weight:500}
 .ben-txt{font-size:13px;color:var(--stone);line-height:1.7}
@@ -271,110 +347,81 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .step-content{display:none}
 .step-content.active{display:block}
 
-/* ─ WISHLIST ─ */
+/* ─ SEARCH RESULTS ─ */
+.search-results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+
+/* ─ WISHLIST HEART ─ */
 .wish-btn{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.8);border:none;font-size:16px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;z-index:3}
 .wish-btn:hover{background:#fff}
 .wish-btn.active{color:var(--red)}
 
-/* ─ CONTACT ─ */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.contact-left{padding:60px;background:var(--char);color:#fff}
-.contact-right{padding:60px;background:var(--warm)}
-.contact-left h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#fff;margin-bottom:24px}
-.cinfo-row{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px;color:rgba(255,255,255,.75);font-size:14px}
-.cinfo-icon{font-size:20px;flex-shrink:0;margin-top:2px}
-.map-frame{width:100%;height:300px;border:none;border-radius:4px;margin-top:24px;filter:grayscale(.3)}
-.social-links{display:flex;gap:12px;margin-top:28px}
-.sl-btn{width:42px;height:42px;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;border-radius:2px;font-size:15px;color:rgba(255,255,255,.6);transition:all .2s;text-decoration:none}
-.sl-btn:hover{border-color:var(--gold);color:var(--gold)}
-
-/* ─ ABOUT ─ */
-.about-hero{background:var(--sand);padding:80px 60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border)}
-.stat-box{padding:32px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;background:var(--warm)}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--gold-d)}
-.stat-lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone)}
-.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-.team-card{text-align:center}
-.team-av{width:100%;aspect-ratio:1;background:var(--sand);border-radius:4px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;font-size:60px}
-.team-nm{font-size:15px;font-weight:400;margin-bottom:4px}
-.team-role{font-size:12px;color:var(--stone);letter-spacing:.1em;text-transform:uppercase}
-
-/* ─ SEARCH ─ */
-.search-results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-
-/* ─ FOOTER ─ */
-.footer{background:var(--char);color:rgba(255,255,255,.7);padding:60px 60px 30px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:50px;margin-bottom:50px}
-.f-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:.25em;color:#fff;text-transform:uppercase;margin-bottom:16px}
-.f-logo span{color:var(--gold)}
-.f-about{font-size:13px;line-height:1.8;color:rgba(255,255,255,.5)}
-.f-col-title{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-bottom:20px;font-weight:500}
-.f-links{list-style:none;display:flex;flex-direction:column;gap:10px}
-.f-links a,.f-links button{font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;background:none;border:none;text-align:left;letter-spacing:.03em;cursor:pointer;padding:0}
-.f-links a:hover,.f-links button:hover{color:var(--gold)}
-.f-sub-txt{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:16px;line-height:1.6}
-.f-form{display:flex;margin-bottom:24px}
-.f-input{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-right:none;color:#fff;padding:10px 14px;font-size:13px;outline:none}
-.f-input::placeholder{color:rgba(255,255,255,.3)}
-.f-submit{background:var(--gold);border:none;color:#fff;padding:10px 16px;font-size:14px;transition:background .2s;cursor:pointer}
-.f-submit:hover{background:var(--gold-d)}
-.f-socials{display:flex;gap:10px}
-.f-soc{width:36px;height:36px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;border-radius:2px;transition:all .2s}
-.f-soc:hover{border-color:var(--gold);color:var(--gold)}
-.f-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.3);flex-wrap:wrap;gap:8px}
-.f-bot a{color:var(--gold)}
-
-/* ══ MOBILE NAV ══ */
-.mob-nav-btn{display:none;background:none;border:none;font-size:22px;color:var(--char);padding:8px;cursor:pointer}
-.mob-search-btn{display:none;background:none;border:none;font-size:18px;color:var(--char);padding:8px;cursor:pointer}
+/* ══ MOBILE NAV TOGGLE ══ */
+.mob-nav-btn{display:none;background:none;border:none;font-size:22px;color:var(--char);padding:8px;margin-left:auto;order:10}
+.mob-search-btn{display:none;background:none;border:none;font-size:18px;color:var(--char);padding:8px}
 #mob-search-bar{display:none;padding:10px 16px;border-top:1px solid var(--border);background:var(--warm)}
 #mob-search-bar.open{display:flex;gap:0}
 #mob-search-bar input{flex:1;border:1px solid var(--border);background:var(--cream);padding:9px 13px;font-size:14px;outline:none;border-radius:2px 0 0 2px;font-family:'Jost',sans-serif}
-#mob-search-bar button{border:none;background:var(--gold);color:#fff;padding:9px 14px;font-size:14px;border-radius:0 2px 2px 0;cursor:pointer}
+#mob-search-bar button{border:none;background:var(--gold);color:#fff;padding:9px 14px;font-size:14px;border-radius:0 2px 2px 0}
+.nav-ul-wrap{flex:1;overflow:hidden}
 
-/* ══ TABLET (900–1199px) ══ */
+/* ══ LARGE DESKTOP (≥1400px) ══ */
+@media(min-width:1400px){
+  .hdr-top,.nav,.sec,.breadcrumb,.footer{padding-left:80px;padding-right:80px}
+  .hero-cnt{padding:0 140px}
+  .prod-grid,.search-results-grid{grid-template-columns:repeat(4,1fr)}
+  .cats-grid{grid-template-columns:repeat(6,1fr)}
+}
+
+/* ══ TABLET LANDSCAPE (900–1199px) ══ */
 @media(max-width:1199px){
-  .hdr-top{padding:12px 28px}
-  .nav{padding:0 28px; display: flex;}
+  .hdr-top{padding:12px 28px;gap:12px;flex-wrap:wrap}
+  .srch{order:3;width:100%;max-width:none}
+  .srch input{width:100%}
+  .hdr-c{display:none}
+  .nav{padding:0 28px}
   .nav-cat{padding:12px 14px;font-size:11px;margin-right:16px}
-  .nav-ul a{padding:12px 8px;font-size:11px;  justify-content: center;}
+  .nav-ul a{padding:12px 8px;font-size:11px}
   .sec{padding:48px 28px}
   .hero-cnt{padding:0 60px}
   .hero-ttl{font-size:52px}
   .prod-grid,.search-results-grid{grid-template-columns:repeat(3,1fr)}
+  .cats-grid{grid-template-columns:repeat(6,1fr)}
   .footer{padding:50px 28px 24px}
   .footer-grid{grid-template-columns:1.5fr 1fr 1fr;gap:32px}
   .footer-grid>div:last-child{grid-column:1/-1}
   .pdp-grid{padding:40px 28px;gap:36px}
   .about-hero{padding:60px 28px}
-  .contact-left,.contact-right{padding:40px 28px}
-  .breadcrumb{padding:16px 28px}
+  .contact-grid .contact-left,.contact-grid .contact-right{padding:40px 28px}
 }
 
 /* ══ TABLET PORTRAIT (600–899px) ══ */
 @media(max-width:899px){
-  .hdr-top{padding:12px 16px;flex-wrap:nowrap;gap:8px}
+  /* Header */
+  .hdr-top{padding:12px 16px;flex-wrap:nowrap;gap:10px}
   .srch{display:none}
-  .hdr-c{display:none}
-  .btn-call{display:none}
   .mob-search-btn{display:flex;align-items:center}
+  .btn-call{display:none}
+  /* Nav */
   .nav{padding:0;position:relative}
   .nav-cat{padding:12px 14px;font-size:11px;margin-right:0;border-radius:0}
   .mob-nav-btn{display:flex;align-items:center}
-  .nav-ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--warm);z-index:300;border-bottom:2px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,.1);flex-direction:column}
-  .nav-ul.open{display:flex}
+  .nav-ul-wrap{display:none;position:absolute;top:100%;left:0;right:0;background:var(--warm);z-index:300;border-bottom:2px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+  .nav-ul-wrap.open{display:block}
+  .nav-ul{flex-direction:column}
   .nav-ul li{border-bottom:1px solid var(--border)}
   .nav-ul a{padding:14px 20px;font-size:13px}
   .nav-ul a::after{display:none}
-  .hero{height:440px}
+  /* Hero */
+  .hero{height:480px}
   .hero-cnt{padding:0 30px;max-width:100%}
   .hero-ttl{font-size:42px}
-  .hero-orn{width:240px;height:240px;opacity:.07}
+  .hero-orn{width:280px;height:280px;opacity:.07}
   .ha-l{left:12px}.ha-r{right:12px}
+  /* Sections */
   .sec{padding:40px 20px}
   .sec-hdr{flex-direction:column;align-items:flex-start;gap:10px}
   .sec-ttl{font-size:30px}
+  /* Grids */
   .cats-grid{grid-template-columns:repeat(3,1fr);gap:14px}
   .prod-grid,.search-results-grid{grid-template-columns:repeat(2,1fr);gap:16px}
   .rev-grid{grid-template-columns:1fr;gap:16px}
@@ -383,92 +430,109 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
   .gallery-grid{grid-template-columns:repeat(2,1fr);gap:3px}
   .gal-item-big{grid-column:span 1;height:220px}
   .news-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .cats-page-grid{grid-template-columns:repeat(2,1fr);gap:20px}
   .about-stats{grid-template-columns:repeat(2,1fr)}
+  /* PDP */
   .pdp-grid{grid-template-columns:1fr;padding:24px 20px;gap:28px}
+  /* Contact */
   .contact-grid{grid-template-columns:1fr}
   .contact-left,.contact-right{padding:36px 20px}
+  /* Promo */
   .promo-grid{grid-template-columns:1fr;gap:16px}
   .promo-card{height:200px;padding:28px}
   .promo-ttl{font-size:26px}
+  /* Checkout */
+  #page-checkout .sec>div[style*="grid"]{display:block}
+  #page-checkout .sec>div>div:last-child{margin-top:24px}
+  /* Footer */
   .footer{padding:40px 20px 20px}
   .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
   .footer-grid>div:first-child{grid-column:1/-1}
+  /* Cart */
   #cart-panel{width:100%;right:-100%}
+  /* Breadcrumb */
   .breadcrumb{padding:12px 20px}
+  /* Form 2-col */
   .form-2{grid-template-columns:1fr}
+  /* Pay methods */
   .pay-methods{grid-template-columns:1fr 1fr;gap:10px}
+  /* About hero */
   .about-hero{padding:40px 20px;grid-template-columns:1fr;gap:32px}
   .about-hero>div:last-child{display:none}
+  /* Steps */
   .step{padding:10px 6px;font-size:10px;letter-spacing:.06em}
 }
 
-/* ══ MOBILE (≤599px) ══ */
-@media(max-width:599px){
-  #announce{font-size:10px;padding:6px 10px;letter-spacing:.06em}
+/* ══ MOBILE (≤479px) ══ */
+@media(max-width:479px){
+  #announce{font-size:10px;padding:6px 10px;letter-spacing:.08em}
   .hdr-top{padding:10px 12px}
-  .logo{font-size:20px;letter-spacing:.15em}
-  .hero{height:400px}
-  .hero-cnt{padding:0 18px}
-  .hero-lbl{font-size:10px;letter-spacing:.15em}
-  .hero-ttl{font-size:30px}
+  .logo{font-size:20px;letter-spacing:.18em}
+  /* Hero */
+  .hero{height:420px}
+  .hero-cnt{padding:0 20px}
+  .hero-lbl{font-size:10px;letter-spacing:.2em}
+  .hero-ttl{font-size:32px}
   .hero-dsc{font-size:13px;margin-bottom:24px}
-  .hero-btns{flex-direction:column;align-items:flex-start;gap:10px}
+  .hero-btns{flex-direction:column;align-items:flex-start;gap:12px}
   .hero-arr{width:36px;height:36px;font-size:14px}
-  .ha-l{left:6px}.ha-r{right:6px}
-  .sec{padding:28px 14px}
-  .sec-ttl{font-size:24px}
-  .cats-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .cat-img{font-size:26px}
-  .cat-nm{font-size:10px}
-  .prod-grid,.search-results-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .prod-body{padding:10px 12px 12px}
-  .prc-now{font-size:15px}
-  .btn-add{font-size:10px;padding:8px}
-  .prod-img{font-size:36px}
+  .ha-l{left:8px}.ha-r{right:8px}
+  /* Sections */
+  .sec{padding:32px 14px}
+  .sec-ttl{font-size:26px}
+  .div-orn{font-size:14px}
+  /* Grids */
+  .cats-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .prod-grid,.search-results-grid{grid-template-columns:1fr;gap:14px}
+  .prod-card{display:grid;grid-template-columns:100px 1fr;align-items:start}
+  .prod-img{aspect-ratio:1;height:100px}
   .prod-badge{top:8px;left:8px;font-size:9px;padding:3px 7px}
   .wish-btn{top:8px;right:8px;width:26px;height:26px;font-size:13px}
-  .news-grid{grid-template-columns:1fr;gap:16px}
-  .gallery-grid{grid-template-columns:1fr 1fr;gap:2px}
+  .prod-body{padding:12px 12px 12px}
+  .prc-now{font-size:15px}
+  .btn-add{font-size:10px;padding:8px}
+  /* Nav */
+  .nav-cat{font-size:10px;padding:11px 12px}
+  /* Cats */
+  .cat-img{font-size:26px}
+  .cat-nm{font-size:10px}
+  /* News */
+  .news-grid{grid-template-columns:1fr}
+  /* Gallery */
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  /* Footer */
   .footer-grid{grid-template-columns:1fr;gap:24px}
   .f-logo{font-size:18px}
-  .ben-grid{grid-template-columns:1fr;gap:20px;text-align:left}
-  .ben-icon{font-size:24px;margin-bottom:8px}
-  .pdp-info h1{font-size:26px!important}
-  .pdp-info .price-big{font-size:24px}
-  .cart-hdr{padding:16px}
-  .cart-items{padding:12px 16px}
-  .cart-foot{padding:12px 16px}
+  /* Ben */
+  .ben-grid{grid-template-columns:1fr;gap:24px;text-align:left}
+  .ben-icon{font-size:26px;margin-bottom:10px}
+  /* PDP */
+  .pdp-info h1{font-size:28px!important}
+  .pdp-info .price-big{font-size:26px}
+  /* Cart */
+  .cart-hdr{padding:18px 16px}
+  .cart-items{padding:14px 16px}
+  .cart-foot{padding:14px 16px}
+  /* Steps */
   .steps{flex-direction:column;gap:4px}
   .step{text-align:left;padding:10px 14px;border-bottom:none;border-left:2px solid var(--border)}
   .step.active{border-left-color:var(--gold)}
   .step.done{border-left-color:var(--green)}
+  /* Breadcrumb */
   .breadcrumb{padding:10px 14px;font-size:11px}
+  /* About stats */
   .about-stats{grid-template-columns:1fr 1fr}
   .stat-num{font-size:36px}
-  .promo-card{height:auto;min-height:160px;padding:24px}
-  .modal{padding:24px 20px}
-  .card-row{grid-template-columns:1fr 1fr;gap:10px}
-  .card-row>div:last-child{display:none}
-  .pay-methods{grid-template-columns:1fr 1fr 1fr;gap:8px}
-  .pay-m{padding:10px 6px}
-  .pay-m .icon{font-size:18px}
-  .pay-m .nm{font-size:10px}
-  #toast-wrap{bottom:16px;right:12px;left:12px}
-  .toast{max-width:100%}
-  .checkout-summary-sticky{position:static!important}
-  .team-grid{grid-template-columns:1fr 1fr;gap:16px}
-  .sec-hdr{gap:6px;margin-bottom:24px}
-  /* Services grid */
-  #page-services .services-inner{grid-template-columns:1fr!important}
-  /* Delivery grid 
-  #page-delivery .delivery-inner{grid-template-columns:1fr!important} */
-}
+  /* Promo */
+  .promo-card{height:auto;min-height:160px}
+  /* Contact */
+  .contact-left
 </style>
 </head>
 <body>
 
-<!-- ANNOUNCEMENT 
-<div id="announce">Free shipping across France from €150 · Over 5,000 products in the catalogue</div> -->
+<!-- ANNOUNCEMENT -->
+<div id="announce">Free shipping across Ukraine from ₴3,000 · Over 5,000 products in the catalogue</div>
 
 <!-- HEADER -->
 <header class="hdr">
@@ -479,15 +543,10 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <button onclick="doSearch()">🔍</button>
     </div>
     <div class="hdr-c">
-      <span class="ph">+33 (0)1 42 68 22 05</span>
-      <span class="em">contact@artdegypse.fr</span>
+      <span class="ph">+38 (099) 681-22-05</span>
+      <span class="em">ermitagedecor@gmail.com</span>
     </div>
-    <!--<button class="btn-call" onclick="openModal('modal-call')">Call Back 📞</button>-->
-    <button class="mob-search-btn" onclick="document.getElementById('mob-search-bar').classList.toggle('open')">🔍</button>
-  </div>
-  <div id="mob-search-bar">
-    <input type="text" id="mob-srch-input" placeholder="Search..." onkeydown="if(event.key==='Enter')doSearchMob()">
-    <button onclick="doSearchMob()">🔍</button>
+    <button class="btn-call" onclick="openModal('modal-call')">Request a Call 📞</button>
   </div>
   <nav class="nav">
     <button class="nav-cat" onclick="nav('catalog')">☰ Catalogue</button>
@@ -496,43 +555,49 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <li><a href="#" data-page="services" onclick="nav('services');return false">Services</a></li>
       <li><a href="#" data-page="about" onclick="nav('about');return false">About Us</a></li>
       <li><a href="#" data-page="gallery" onclick="nav('gallery');return false">Gallery</a></li>
-      <!-- <li><a href="#" data-page="delivery" onclick="nav('delivery');return false">Delivery</a></li> -->
+      <li><a href="#" data-page="delivery" onclick="nav('delivery');return false">Delivery</a></li>
       <li><a href="#" data-page="news" onclick="nav('news');return false">News</a></li>
-      <li><a href="#" data-page="contact" onclick="nav('contact');return false">Contact</a></li>
+      <li><a href="#" data-page="contact" onclick="nav('contact');return false">Contacts</a></li>
     </ul>
-    <button class="mob-nav-btn" id="mob-nav-btn" onclick="toggleMobNav()">☰</button>
-    <!-- <button class="cart-btn" onclick="toggleCart()">🛒<span class="cart-badge" id="cart-badge">0</span></button> -->
+    <button class="cart-btn" onclick="toggleCart()">🛒<span class="cart-badge" id="cart-badge">0</span></button>
   </nav>
 </header>
 
-<!-- ══ PAGES ══ -->
+<!-- ══════════════ PAGES ══════════════ -->
 
 <!-- HOME -->
 <div id="page-home" class="page active">
+  <!-- HERO -->
   <section class="hero">
     <button class="hero-arr ha-l" onclick="heroSlide(-1)">←</button>
     <button class="hero-arr ha-r" onclick="heroSlide(1)">→</button>
     <div class="hero-slides" id="heroSlides">
       <div class="hero-slide hs1">
+        <svg class="hero-orn" viewBox="0 0 400 400" fill="none">
+          <circle cx="200" cy="200" r="180" stroke="#9B7A44" stroke-width="1"/>
+          <circle cx="200" cy="200" r="140" stroke="#9B7A44" stroke-width=".5"/>
+          <circle cx="200" cy="200" r="100" stroke="#9B7A44" stroke-width="1"/>
+          <path d="M200 20L200 380M20 200L380 200" stroke="#9B7A44" stroke-width=".5"/>
+          <path d="M200 20L380 200L200 380L20 200Z" stroke="#9B7A44" stroke-width=".5"/>
+          <circle cx="200" cy="200" r="30" stroke="#9B7A44" stroke-width="1"/>
+        </svg>
         <div class="hero-cnt">
           <span class="hero-lbl">Premium Plaster Décor</span>
           <h1 class="hero-ttl">The Art of<br><em>Stucco</em><br>for Your Home</h1>
-          <p class="hero-dsc">Handcrafted gypsum products. Columns, cornices, medallions and façade décor from France's leading studio.</p>
+          <p class="hero-dsc">Handcrafted gypsum products. Columns, cornices, medallions and façade décor from Ukraine's leading studio.</p>
           <div class="hero-btns">
             <button class="btn-p" onclick="nav('catalog')">View Catalogue</button>
             <button class="btn-o" onclick="nav('gallery')">Our Works</button>
           </div>
         </div>
-        <img class="hero_slide-image" src="images/banners/banner-premium-design.jpg" alt="Image banner slide 1"></img>
       </div>
       <div class="hero-slide hs2">
         <div class="hero-cnt">
           <span class="hero-lbl">New Collection 2026</span>
-          <h1 class="hero-ttl">Façade<br><em>Décor</em><br>New Era</h1>
+          <h1 class="hero-ttl">Façade<br><em>Décor</em><br>of a New Era</h1>
           <p class="hero-dsc">Weather-resistant elements for exterior finishing. Classic elegance meets modern durability.</p>
           <div class="hero-btns"><button class="btn-p" onclick="nav('catalog')">Explore Now</button></div>
         </div>
-        <img class="hero_slide-image" src="images/banners/banner-new-era.jpg" alt="Image banner slide 2"></img>
       </div>
       <div class="hero-slide hs3">
         <div class="hero-cnt">
@@ -541,7 +606,6 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
           <p class="hero-dsc">Selected items at reduced prices. Elevate your project with premium décor for less.</p>
           <div class="hero-btns"><button class="btn-p" onclick="nav('catalog')">Shop Sale</button></div>
         </div>
-        <img class="hero_slide-image" src="images/banners/banner-spring.jpg" alt="Image banner slide 3"></img>
       </div>
     </div>
     <div class="hero-nav" id="heroDots">
@@ -551,6 +615,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     </div>
   </section>
 
+  <!-- CATEGORIES -->
   <section class="sec">
     <div class="sec-hdr">
       <div><span class="sec-lbl">Assortment</span><h2 class="sec-ttl">Product Categories</h2></div>
@@ -561,6 +626,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 
   <div class="div-orn">— ✦ —</div>
 
+  <!-- RECOMMENDED -->
   <section class="sec">
     <div class="sec-hdr">
       <div><span class="sec-lbl">Editor's Pick</span><h2 class="sec-ttl">Recommended Products</h2></div>
@@ -569,6 +635,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     <div class="prod-grid" id="home-recs"></div>
   </section>
 
+  <!-- PROMO -->
   <section class="sec" style="padding-top:0">
     <div class="promo-grid">
       <div class="promo-card pc1">
@@ -589,6 +656,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     </div>
   </section>
 
+  <!-- NEW GOODS -->
   <section class="sec" style="padding-top:0">
     <div class="sec-hdr">
       <div><span class="sec-lbl">Just Added</span><h2 class="sec-ttl">New Arrivals</h2></div>
@@ -597,23 +665,25 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     <div class="prod-grid" id="home-new"></div>
   </section>
 
+  <!-- BENEFITS -->
   <section class="sec" style="border-top:1px solid var(--border)">
     <div class="ben-grid">
-      <div><span class="ben-icon">🏭</span><p class="ben-title">Own Production</p><p class="ben-txt">All products are made at our studio in France with quality control at every stage</p></div>
-      <!-- <div><span class="ben-icon">🚚</span><p class="ben-title">Fast Delivery</p><p class="ben-txt">Shipped across France within 2–5 days. Free from €150</p></div> -->
+      <div><span class="ben-icon">🏭</span><p class="ben-title">Own Production</p><p class="ben-txt">All products are made at our factory in Ukraine with quality control at every stage</p></div>
+      <div><span class="ben-icon">🚚</span><p class="ben-title">Fast Delivery</p><p class="ben-txt">We ship across Ukraine within 1–3 days. Free from ₴3,000</p></div>
       <div><span class="ben-icon">🎨</span><p class="ben-title">Custom Orders</p><p class="ben-txt">We produce pieces from your sketches and dimensions. Unique solutions for every project</p></div>
       <div><span class="ben-icon">✅</span><p class="ben-title">Quality Guarantee</p><p class="ben-txt">25 years of experience and thousands of completed projects. Official warranty on all products</p></div>
     </div>
   </section>
 
+  <!-- REVIEWS -->
   <section class="sec" style="background:var(--sand)">
     <div class="sec-hdr">
       <div><span class="sec-lbl">Client Testimonials</span><h2 class="sec-ttl">What Our Clients Say</h2></div>
     </div>
     <div class="rev-grid">
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">«We ordered cornices and medallions for a classic interior. The quality is impeccable, delivery was on time. Highly recommend!»</p><p class="rev-auth">Elise M. — Paris</p></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">«We ordered façade décor for our country house. The advisors helped us select elements, everything arrived in perfect condition. The house looks magnificent.»</p><p class="rev-auth">Antoine B. — Lyon</p></div>
-      <div class="rev-card"><div class="rev-stars">★★★★☆</div><p class="rev-txt">«Custom-made columns. The result exceeded our expectations. True masters of their craft!»</p><p class="rev-auth">Isabelle V. — Bordeaux</p></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">«We ordered cornices and medallions for a classic interior. The quality is impeccable, delivery was on time. Highly recommend!»</p><p class="rev-auth">Elena K. — Kyiv</p></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">«We ordered façade décor for our cottage. The managers helped us select elements, everything arrived in perfect condition. The house looks magnificent.»</p><p class="rev-auth">Andrew M. — Lviv</p></div>
+      <div class="rev-card"><div class="rev-stars">★★★★☆</div><p class="rev-txt">«They made columns to custom dimensions. The result exceeded expectations. True masters of their craft!»</p><p class="rev-auth">Iryna V. — Kharkiv</p></div>
     </div>
   </section>
 </div>
@@ -650,7 +720,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
   <div class="pdp-grid" id="pdp-content"></div>
 </div>
 
-<!-- SEARCH -->
+<!-- SEARCH RESULTS -->
 <div id="page-search" class="page">
   <div class="breadcrumb">Search Results</div>
   <section class="sec">
@@ -668,7 +738,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     <div class="sec-hdr">
       <div><span class="sec-lbl">What We Offer</span><h2 class="sec-ttl">Our Services</h2></div>
     </div>
-    <div class="services-inner" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
       <div style="background:var(--warm);border:1px solid var(--border);border-radius:4px;padding:36px;text-align:center">
         <div style="font-size:48px;margin-bottom:16px">🎨</div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;margin-bottom:12px">Design Consultation</h3>
@@ -677,7 +747,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       </div>
       <div style="background:var(--warm);border:1px solid var(--border);border-radius:4px;padding:36px;text-align:center">
         <div style="font-size:48px;margin-bottom:16px">🏗️</div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;margin-bottom:12px">Fabrication Custom Orders</h3>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;margin-bottom:12px">Custom Manufacturing</h3>
         <p style="font-size:14px;color:var(--stone);line-height:1.8;margin-bottom:20px">We produce unique pieces from your sketches and technical drawings. Any size, any complexity.</p>
         <button class="btn-p" onclick="openModal('modal-contact')">Get Quote</button>
       </div>
@@ -702,7 +772,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <div style="background:var(--warm);border:1px solid var(--border);border-radius:4px;padding:36px;text-align:center">
         <div style="font-size:48px;margin-bottom:16px">🚚</div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;margin-bottom:12px">Wholesale Supply</h3>
-        <p style="font-size:14px;color:var(--stone);line-height:1.8;margin-bottom:20px">Special pricing for contractors, architects and designers. Ongoing supply agreements available.</p>
+        <p style="font-size:14px;color:var(--stone);line-height:1.8;margin-bottom:20px">Special pricing for contractors, architects, and designers. Ongoing supply agreements available.</p>
         <button class="btn-p" onclick="openModal('modal-contact')">Wholesale Inquiry</button>
       </div>
     </div>
@@ -711,13 +781,13 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 
 <!-- ABOUT -->
 <div id="page-about" class="page">
-  <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ À Propos</span></div>
+  <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ About Us</span></div>
   <div class="about-hero">
     <div>
       <span class="sec-lbl">Our Story</span>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;margin-bottom:24px;line-height:1.2">25 Years of<br><em style="color:var(--gold-d)">Craftsmanship</em></h2>
-      <p style="font-size:15px;color:var(--stone);line-height:1.9;margin-bottom:20px">Art de Gypse was founded in 1999 as a small artisan studio in Paris. Over two and a half decades, we have grown into France's leading manufacturer of gypsum stucco and façade decoration.</p>
-      <p style="font-size:15px;color:var(--stone);line-height:1.9;margin-bottom:28px">Every piece that leaves our workshop carries the signature of skilled hands — from classic Baroque cornices to contemporary minimalist panels.</p>
+      <p style="font-size:15px;color:var(--stone);line-height:1.9;margin-bottom:20px">ErmitageDecor was founded in 1999 as a small artisan studio in Poltava. Over two and a half decades, we have grown into Ukraine's leading manufacturer of gypsum stucco and façade decoration.</p>
+      <p style="font-size:15px;color:var(--stone);line-height:1.9;margin-bottom:28px">Every piece that leaves our workshop carries the signature of skilled hands and the weight of tradition — from classic Baroque cornices to contemporary minimalist panels.</p>
       <button class="btn-p" onclick="nav('catalog')">Explore Our Products</button>
     </div>
     <div style="background:var(--sand);border-radius:4px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:120px">🏛</div>
@@ -727,9 +797,9 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <div class="stat-box"><div class="stat-num">5000+</div><div class="stat-lbl">Products</div></div>
       <div class="stat-box"><div class="stat-num">25</div><div class="stat-lbl">Years of Experience</div></div>
       <div class="stat-box"><div class="stat-num">15K+</div><div class="stat-lbl">Completed Orders</div></div>
-      <div class="stat-box"><div class="stat-num">47</div><div class="stat-lbl">Craftsmen</div></div>
+      <div class="stat-box"><div class="stat-num">47</div><div class="stat-lbl">Craftsmen on Staff</div></div>
       <div class="stat-box"><div class="stat-num">3</div><div class="stat-lbl">Production Sites</div></div>
-      <div class="stat-box"><div class="stat-num">100%</div><div class="stat-lbl">Made in France</div></div>
+      <div class="stat-box"><div class="stat-num">100%</div><div class="stat-lbl">Ukrainian Made</div></div>
     </div>
   </section>
   <section class="sec">
@@ -737,17 +807,17 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <div><span class="sec-lbl">Our People</span><h2 class="sec-ttl">Meet the Team</h2></div>
     </div>
     <div class="team-grid">
-      <div class="team-card"><div class="team-av">👨‍💼</div><p class="team-nm">Pierre Dumont</p><p class="team-role">Fondateur & Directeur</p></div>
-      <div class="team-card"><div class="team-av">👩‍🎨</div><p class="team-nm">Marie Laurent</p><p class="team-role">Head of Design</p></div>
-      <div class="team-card"><div class="team-av">👨‍🔧</div><p class="team-nm">Jean Moreau</p><p class="team-role">Master Craftsman</p></div>
-      <div class="team-card"><div class="team-av">👩‍💻</div><p class="team-nm">Sophie Bernard</p><p class="team-role">Client Relations</p></div>
+      <div class="team-card"><div class="team-av">👨‍💼</div><p class="team-nm">Oleksiy Kovalenko</p><p class="team-role">Founder & Director</p></div>
+      <div class="team-card"><div class="team-av">👩‍🎨</div><p class="team-nm">Marina Petrenko</p><p class="team-role">Head of Design</p></div>
+      <div class="team-card"><div class="team-av">👨‍🔧</div><p class="team-nm">Viktor Melnyk</p><p class="team-role">Master Craftsman</p></div>
+      <div class="team-card"><div class="team-av">👩‍💻</div><p class="team-nm">Sophia Bondar</p><p class="team-role">Client Relations</p></div>
     </div>
   </section>
 </div>
 
 <!-- GALLERY -->
 <div id="page-gallery" class="page">
-  <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ Galerie</span></div>
+  <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ Gallery</span></div>
   <section class="sec">
     <div class="sec-hdr">
       <div><span class="sec-lbl">Our Portfolio</span><h2 class="sec-ttl">Photo Gallery</h2></div>
@@ -756,60 +826,66 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <button class="filter-tag active" onclick="filterGal('all',this)">All</button>
       <button class="filter-tag" onclick="filterGal('interior',this)">Interior</button>
       <button class="filter-tag" onclick="filterGal('exterior',this)">Exterior</button>
-      <button class="filter-tag" onclick="filterGal('custom',this)">Custom Orders</button>
+      <button class="filter-tag" onclick="filterGal('custom',this)">Custom</button>
     </div>
     <div class="gallery-grid" id="gallery-grid"></div>
+    <!-- Upload your photos -->
+    <div style="margin-top:32px;border:2px dashed var(--border);border-radius:4px;padding:32px;text-align:center">
+      <p style="font-size:13px;color:var(--stone);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">📸 Upload Your Project Photos</p>
+      <input type="file" id="gal-upload" multiple accept="image" style="display:none" onchange="uploadGallery(this)">
+      <button class="btn-p" onclick="document.getElementById('gal-upload').click()">Choose Images</button>
+    </div>
   </section>
 </div>
 
-<!-- DELIVERY 
+<!-- DELIVERY -->
 <div id="page-delivery" class="page">
   <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ Payment & Delivery</span></div>
   <section class="sec">
     <div class="sec-hdr">
       <div><span class="sec-lbl">Logistics</span><h2 class="sec-ttl">Payment & Delivery</h2></div>
     </div>
-    <div class="delivery-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
       <div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:20px">Delivery Options</h3>
         <div style="border:1px solid var(--border);border-radius:4px;padding:24px;margin-bottom:16px">
-          <p style="font-weight:500;margin-bottom:8px">Colissimo (La Poste)</p>
-          <p style="font-size:14px;color:var(--stone);line-height:1.8">Delivery to your door or pick-up point anywhere in France. Standard: 2–4 business days. Free from €150.</p>
+          <p style="font-weight:500;margin-bottom:8px">Nova Poshta</p>
+          <p style="font-size:14px;color:var(--stone);line-height:1.8">Delivery to any Nova Poshta branch or address in Ukraine. Standard: 1–3 business days. Free from ₴3,000.</p>
         </div>
         <div style="border:1px solid var(--border);border-radius:4px;padding:24px;margin-bottom:16px">
-          <p style="font-weight:500;margin-bottom:8px">Chronopost Express</p>
-          <p style="font-size:14px;color:var(--stone);line-height:1.8">Next-day express delivery before 1 PM across mainland France.</p>
+          <p style="font-weight:500;margin-bottom:8px">Ukrposhta</p>
+          <p style="font-size:14px;color:var(--stone);line-height:1.8">Economical option for non-urgent orders. 3–7 business days across Ukraine.</p>
         </div>
         <div style="border:1px solid var(--border);border-radius:4px;padding:24px">
-          <p style="font-weight:500;margin-bottom:8px">Courier Delivery (Paris)</p>
-          <p style="font-size:14px;color:var(--stone);line-height:1.8">Same-day or next-day courier delivery within Paris and inner suburbs. €15 flat rate.</p>
+          <p style="font-weight:500;margin-bottom:8px">Courier Delivery (Poltava)</p>
+          <p style="font-size:14px;color:var(--stone);line-height:1.8">Same-day or next-day courier delivery within Poltava city limits. ₴80 flat rate.</p>
         </div>
       </div>
       <div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:20px">Payment Methods</h3>
         <div style="border:1px solid var(--border);border-radius:4px;padding:24px;margin-bottom:16px">
-          <p style="font-weight:500;margin-bottom:8px">💳 Card Payment</p>
-          <p style="font-size:14px;color:var(--stone);line-height:1.8">Visa, Mastercard, American Express. Secure 3D Secure processing. Instant order confirmation.</p>
+          <p style="font-weight:500;margin-bottom:8px">💳 Online Card Payment</p>
+          <p style="font-size:14px;color:var(--stone);line-height:1.8">Visa, Mastercard. Secure 3D Secure processing. Instant order confirmation.</p>
         </div>
         <div style="border:1px solid var(--border);border-radius:4px;padding:24px;margin-bottom:16px">
           <p style="font-weight:500;margin-bottom:8px">🏦 Bank Transfer</p>
-          <p style="font-size:14px;color:var(--stone);line-height:1.8">Transfer to our IBAN. Order processed after payment confirmation (1 business day).</p>
+          <p style="font-size:14px;color:var(--stone);line-height:1.8">Transfer to our IBAN. Order is processed after payment confirmation (1 banking day).</p>
         </div>
         <div style="border:1px solid var(--border);border-radius:4px;padding:24px">
           <p style="font-weight:500;margin-bottom:8px">💰 Cash on Delivery</p>
-          <p style="font-size:14px;color:var(--stone);line-height:1.8">Pay upon receipt via Colissimo. Available for orders up to €500.</p>
+          <p style="font-size:14px;color:var(--stone);line-height:1.8">Pay upon receipt at Nova Poshta. Available for orders up to ₴10,000.</p>
         </div>
       </div>
     </div>
   </section>
-</div> -->
+</div>
 
 <!-- NEWS -->
 <div id="page-news" class="page">
-  <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ News &amp; Articles</span></div>
+  <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ News</span></div>
   <section class="sec">
     <div class="sec-hdr">
-      <div><span class="sec-lbl">Latest Updates</span><h2 class="sec-ttl">Actualités & Articles</h2></div>
+      <div><span class="sec-lbl">Latest Updates</span><h2 class="sec-ttl">News & Articles</h2></div>
     </div>
     <div class="news-grid" id="news-grid"></div>
   </section>
@@ -817,32 +893,33 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 
 <!-- CONTACT -->
 <div id="page-contact" class="page">
-  <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ Contact</span></div>
+  <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ Contacts</span></div>
   <div class="contact-grid">
     <div class="contact-left">
       <h2>Get in Touch</h2>
-      <div class="cinfo-row"><span class="cinfo-icon">📍</span><div><strong>Address</strong><br>12 Rue du Faubourg Saint-Honoré, 75008 Paris, France</div></div>
-      <div class="cinfo-row"><span class="cinfo-icon">📞</span><div><strong>Phone</strong><br>+33 (0)1 42 68 22 05<br>+33 (0)1 42 34 56 78</div></div>
-      <div class="cinfo-row"><span class="cinfo-icon">✉️</span><div><strong>Email</strong><br>contact@artdegypse.fr</div></div>
+      <div class="cinfo-row"><span class="cinfo-icon">📍</span><div><strong>Address</strong><br>12 Soborna Street, Poltava, Ukraine 36000</div></div>
+      <div class="cinfo-row"><span class="cinfo-icon">📞</span><div><strong>Phone</strong><br>+38 (099) 681-22-05<br>+38 (044) 234-56-78</div></div>
+      <div class="cinfo-row"><span class="cinfo-icon">✉️</span><div><strong>Email</strong><br>ermitagedecor@gmail.com</div></div>
       <div class="cinfo-row"><span class="cinfo-icon">🕐</span><div><strong>Working Hours</strong><br>Mon–Fri: 9:00–18:00<br>Sat: 10:00–16:00</div></div>
       <div class="social-links">
         <a href="#" class="sl-btn">f</a>
         <a href="#" class="sl-btn">in</a>
-        <a href="#" class="sl-btn">ig</a>
+        <a href="#" class="sl-btn">t</a>
         <a href="https://t.me/artdegypse" class="sl-btn">✈</a>
       </div>
-      <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83999.45!2d2.3200!3d48.8700!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1234567890" allowfullscreen loading="lazy"></iframe>
+      <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84222.18!2d34.5514!3d49.5883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d9cf9b8a4c9f77%3A0x63b4af3d7f74c3c!2sPoltava%2C%20Poltava%20Oblast!5e0!3m2!1sen!2sua!4v1234567890" allowfullscreen loading="lazy"></iframe>
     </div>
     <div class="contact-right">
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;margin-bottom:24px">Send a Message</h2>
-      <p style="font-size:13px;color:var(--stone);margin-bottom:16px">Choose how you would like to be contacted:</p>
+      <p style="font-size:13px;color:var(--stone);margin-bottom:16px">Choose how you'd like to be contacted:</p>
       <div class="msg-channels" id="contact-channels">
         <button class="ch-btn active" data-ch="email" onclick="setChannel(this)">📧 Email</button>
         <button class="ch-btn" data-ch="telegram" onclick="setChannel(this)">✈ Telegram</button>
         <button class="ch-btn" data-ch="whatsapp" onclick="setChannel(this)">📱 WhatsApp</button>
+        <button class="ch-btn" data-ch="viber" onclick="setChannel(this)">💬 Viber</button>
       </div>
       <div class="form-row"><label>Your Name</label><input id="c-name" type="text" placeholder="John Smith"></div>
-      <div class="form-row"><label>Phone / Email</label><input id="c-contact" type="text" placeholder="+33 6 XX XX XX XX or email@example.com"></div>
+      <div class="form-row"><label>Phone / Email</label><input id="c-contact" type="text" placeholder="+38 0XX XXX XX XX or email@example.com"></div>
       <div class="form-row"><label>Message</label><textarea id="c-msg" placeholder="Tell us about your project..."></textarea></div>
       <button class="btn-p" onclick="sendContactMsg()" style="width:100%;text-align:center">Send Message</button>
       <div id="contact-status" class="msg-status hidden"></div>
@@ -850,7 +927,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
   </div>
 </div>
 
-<!-- CHECKOUT 
+<!-- CHECKOUT -->
 <div id="page-checkout" class="page">
   <div class="breadcrumb"><a href="#" onclick="nav('home');return false">Home</a> <span>/ Checkout</span></div>
   <section class="sec">
@@ -862,33 +939,37 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
           <div class="step" id="step2-tab">2. Shipping</div>
           <div class="step" id="step3-tab">3. Payment</div>
         </div>
+        <!-- Step 1 -->
         <div class="step-content active" id="step1">
           <div class="form-2">
             <div class="form-row"><label>First Name</label><input id="ch-fname" type="text" placeholder="John"></div>
             <div class="form-row"><label>Last Name</label><input id="ch-lname" type="text" placeholder="Smith"></div>
           </div>
-          <div class="form-row"><label>E-mail</label><input id="ch-email" type="email" placeholder="your@email.com"></div>
-          <div class="form-row"><label>Phone</label><input id="ch-phone" type="tel" placeholder="+33 6 XX XX XX XX"></div>
+          <div class="form-row"><label>Email</label><input id="ch-email" type="email" placeholder="your@email.com"></div>
+          <div class="form-row"><label>Phone</label><input id="ch-phone" type="tel" placeholder="+38 0XX XXX XX XX"></div>
           <button class="btn-p" style="margin-top:8px" onclick="checkoutStep(2)">Continue to Shipping →</button>
         </div>
+        <!-- Step 2 -->
         <div class="step-content" id="step2">
-          <div class="form-row"><label>City</label><input id="ch-city" type="text" placeholder="Paris, Lyon, Bordeaux..."></div>
+          <div class="form-row"><label>City</label><input id="ch-city" type="text" placeholder="Kyiv, Lviv, Kharkiv..."></div>
           <div class="form-row"><label>Delivery Method</label>
             <select id="ch-delivery">
-              <option value="colissimo">Colissimo — €8 (2–4 days)</option>
-              <option value="chrono">Chronopost Express — €18 (next day)</option>
-              <option value="courier">Courier Paris — €15</option>
-              <option value="pickup">Studio Pickup — Free</option>
+              <option value="nova">Nova Poshta — ₴80 (1–3 days)</option>
+              <option value="ukr">Ukrposhta — ₴50 (3–7 days)</option>
+              <option value="courier">Courier (Poltava) — ₴80</option>
+              <option value="pickup">Pickup from Poltava — Free</option>
             </select>
           </div>
-          <div class="form-row"><label>Full Address</label><input id="ch-addr" type="text" placeholder="Street, number, apartment, postcode"></div>
-          <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap">
+          <div class="form-row"><label>Nova Poshta Branch # (if applicable)</label><input id="ch-branch" type="text" placeholder="Branch number"></div>
+          <div class="form-row"><label>Address</label><input id="ch-addr" type="text" placeholder="Street, building, apartment"></div>
+          <div style="display:flex;gap:12px;margin-top:8px">
             <button class="btn-o" onclick="checkoutStep(1)">← Back</button>
             <button class="btn-p" onclick="checkoutStep(3)">Continue to Payment →</button>
           </div>
         </div>
+        <!-- Step 3 -->
         <div class="step-content" id="step3">
-          <p style="font-size:13px;color:var(--stone);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px">Payment Method</p>
+          <p style="font-size:13px;color:var(--stone);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px">Select Payment Method</p>
           <div class="pay-methods">
             <div class="pay-m active" onclick="selectPay(this,'card')"><div class="icon">💳</div><div class="nm">Card</div></div>
             <div class="pay-m" onclick="selectPay(this,'bank')"><div class="icon">🏦</div><div class="nm">Bank Transfer</div></div>
@@ -904,39 +985,40 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
             </div>
             <div class="pay-secure">🔒 Secured by 3D Secure — your card data is never stored</div>
           </div>
-          <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+          <div style="display:flex;gap:12px;margin-top:24px">
             <button class="btn-o" onclick="checkoutStep(2)">← Back</button>
-            <button class="btn-g" onclick="placeOrder()" style="flex:1">Place Order — €<span id="order-total-btn">0</span></button>
+            <button class="btn-g" onclick="placeOrder()" style="flex:1">Place Order — ₴<span id="order-total-btn">0</span></button>
           </div>
         </div>
       </div>
+      <!-- Order Summary -->
       <div>
-        <div class="checkout-summary-sticky" style="background:var(--warm);border:1px solid var(--border);border-radius:4px;padding:24px;position:sticky;top:90px">
+        <div style="background:var(--warm);border:1px solid var(--border);border-radius:4px;padding:24px;position:sticky;top:90px">
           <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:14px">Order Summary</h3>
           <div id="checkout-items"></div>
           <div style="border-top:1px solid var(--border);margin-top:16px;padding-top:16px">
-            <div style="display:flex;justify-content:space-between;font-size:14px;color:var(--stone);margin-bottom:8px"><span>Subtotal</span><span id="co-sub">€0</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:14px;color:var(--stone);margin-bottom:8px"><span>Delivery</span><span id="co-del">€8</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:18px;font-weight:500;margin-top:12px"><span>Total</span><span id="co-total">€8</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:14px;color:var(--stone);margin-bottom:8px"><span>Subtotal</span><span id="co-sub">₴0</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:14px;color:var(--stone);margin-bottom:8px"><span>Delivery</span><span id="co-del">₴80</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:18px;font-weight:500;margin-top:12px"><span>Total</span><span id="co-total">₴80</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
-</div> -->
+</div>
 
-<!-- SUCCESS -->
+<!-- ORDER SUCCESS -->
 <div id="page-success" class="page">
   <section class="sec" style="text-align:center;padding:100px 60px">
     <div style="font-size:80px;margin-bottom:24px">✅</div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;margin-bottom:16px">Order Placed!</h2>
-    <p style="font-size:16px;color:var(--stone);margin-bottom:32px">Thank you for your order. We will contact you within 30 minutes to confirm details.</p>
+    <p style="font-size:16px;color:var(--stone);margin-bottom:32px">Thank you for your order. We'll contact you within 30 minutes to confirm details.</p>
     <p id="order-confirm-num" style="font-size:14px;color:var(--stone);margin-bottom:32px"></p>
     <button class="btn-p" onclick="nav('home')">Continue Shopping</button>
   </section>
 </div>
 
-<!-- CART -->
+<!-- ══════════════ CART SIDEBAR ══════════════ -->
 <div id="cart-overlay" onclick="toggleCart()"></div>
 <div id="cart-panel">
   <div class="cart-hdr">
@@ -949,18 +1031,20 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <input id="coupon-input" type="text" placeholder="Coupon code (try SAVE10)">
       <button onclick="applyCoupon()">Apply</button>
     </div>
-    <div class="cart-total"><span>Total:</span><span id="cart-total-val">0 €</span></div>
+    <div class="cart-total"><span>Total:</span><span id="cart-total-val">₴0</span></div>
     <button class="btn-p" style="width:100%;text-align:center;display:block;padding:14px" onclick="toggleCart();nav('checkout')">Proceed to Checkout</button>
   </div>
 </div>
 
-<!-- MODALS -->
+<!-- ══════════════ MODALS ══════════════ -->
+
+<!-- CALL MODAL -->
 <div class="modal-overlay" id="modal-call">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('modal-call')">✕</button>
-    <h2>Request a Call Back</h2>
+    <h2>Request a Call</h2>
     <div class="form-row"><label>Your Name</label><input id="rc-name" type="text" placeholder="John Smith"></div>
-    <div class="form-row"><label>Phone Number</label><input id="rc-phone" type="tel" placeholder="+33 6 XX XX XX XX"></div>
+    <div class="form-row"><label>Phone Number</label><input id="rc-phone" type="tel" placeholder="+38 0XX XXX XX XX"></div>
     <div class="form-row"><label>Convenient Time</label>
       <select id="rc-time">
         <option>As soon as possible</option>
@@ -974,6 +1058,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
   </div>
 </div>
 
+<!-- CONTACT MODAL -->
 <div class="modal-overlay" id="modal-contact">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('modal-contact')">✕</button>
@@ -983,32 +1068,51 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <button class="ch-btn" data-ch="telegram" onclick="setChannelM(this)">✈ Telegram</button>
       <button class="ch-btn" data-ch="whatsapp" onclick="setChannelM(this)">📱 WhatsApp</button>
     </div>
-    <div class="form-row"><label>Last Name</label><input id="m-name" type="text" placeholder="Your name"></div>
+    <div class="form-row"><label>Name</label><input id="m-name" type="text" placeholder="Your name"></div>
     <div class="form-row"><label>Contact</label><input id="m-contact" type="text" placeholder="Phone or email"></div>
     <div class="form-row"><label>Message</label><textarea id="m-msg" placeholder="How can we help?"></textarea></div>
-    <button class="btn-p" style="width:100%" onclick="sendModalMsg()">Envoyer</button>
+    <button class="btn-p" style="width:100%" onclick="sendModalMsg()">Send</button>
     <div id="modal-msg-status" class="msg-status hidden"></div>
   </div>
 </div>
 
-<div id="lightbox" style="position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:700;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s" onclick="closeLightbox()">
-  <button id="lightbox-close" style="position:absolute;top:24px;right:32px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer" onclick="closeLightbox()">✕</button>
-  <span id="lb-icon" style="font-size:120px"></span>
+<!-- IMAGE UPLOAD MODAL -->
+<div class="modal-overlay" id="modal-imgup">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-imgup')">✕</button>
+    <h2>Change Image</h2>
+    <p style="font-size:14px;color:var(--stone);margin-bottom:20px">Upload a new image or enter a URL below.</p>
+    <div class="upload-zone" onclick="document.getElementById('img-file-input').click()">
+      <p>📸 Click to choose a file</p>
+      <p style="font-size:11px;margin-top:6px;opacity:.6">PNG, JPG, WEBP — max 5MB</p>
+    </div>
+    <input type="file" id="img-file-input" accept="image" style="display:none" onchange="handleImgFile(this)">
+    <div style="text-align:center;margin:16px 0;color:var(--stone-l);font-size:12px;letter-spacing:.1em">— OR —</div>
+    <div class="form-row"><label>Image URL</label><input id="img-url-input" type="url" placeholder="https://example.com/image.jpg"></div>
+    <button class="btn-p" style="width:100%;margin-top:8px" onclick="applyImgUrl()">Apply</button>
+  </div>
 </div>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<!-- TOAST CONTAINER -->
 <div id="toast-wrap"></div>
 
-<!-- FOOTER -->
+<!-- ══════════════ FOOTER ══════════════ -->
 <footer class="footer">
   <div class="footer-grid">
     <div>
       <div class="f-logo">Art <span>de</span> Gypse</div>
-      <p class="f-about">Art de Gypse — France's leading studio for gypsum stucco and façade decoration. Over 5,000 products and 25 years of craftsmanship excellence.</p>
+      <p class="f-about">ErmitageDecor — Ukraine's leading studio for gypsum stucco and façade decoration. Over 5,000 products and 25 years of craftsmanship excellence.</p>
     </div>
     <div>
       <p class="f-col-title">Information</p>
       <ul class="f-links">
-        <!-- <li><button onclick="nav('delivery')">Payment & Delivery</button></li> -->
+        <li><button onclick="nav('delivery')">Payment & Delivery</button></li>
         <li><button onclick="nav('about')">About Us</button></li>
         <li><button onclick="nav('services')">Services</button></li>
         <li><a href="#">Returns & Exchanges</a></li>
@@ -1026,96 +1130,91 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     </div>
     <div>
       <p class="f-col-title">Stay Updated</p>
-      <p class="f-sub-txt">Link social networks</p>
-      <!-- <div class="f-form">
+      <p class="f-sub-txt">Subscribe for promotions and news — get 5% off your first order</p>
+      <div class="f-form">
         <input class="f-input" id="f-email" type="email" placeholder="your@email.com">
-        <button class="f-submit" onclick="subscribeEmail()">→</button> 
-      </div> -->
+        <button class="f-submit" onclick="subscribeEmail()">→</button>
+      </div>
       <div class="f-socials">
-        <a href="#" class="f-soc">tg</a>
+        <a href="#" class="f-soc">f</a>
         <a href="#" class="f-soc">in</a>
         <a href="#" class="f-soc">✈</a>
       </div>
     </div>
   </div>
   <div class="f-bot">
-    <p>Gypsum & Façade Stucco Décor &nbsp;·&nbsp; © 2018–2026 Art de Gypse</p>
+    <p>Gypsum & Façade Stucco Décor &nbsp;·&nbsp; © 2018–2026 ErmitageDecor</p>
     <a href="#">Made by GreedPig</a>
   </div>
 </footer>
 
+<!-- ══════════════ JAVASCRIPT ══════════════ -->
 <script>
 // ─── DATA ───────────────────────────────────────────────────────
 const CATS = [
-  {id:'columns',name:'Columns',icon:'images/category/cat-columns.png'},
-  {id:'cornices',name:'Cornices',icon:'images/category/cat-cornices.png'},
-  {id:'medallions',name:'Medallions',icon:'images/category/cat-medallions.png'},
-  {id:'frames',name:'Frames',icon:'images/category/cat-frames.png'},
-  {id:'facade',name:'Façade',icon:'images/category/cat-facade.png'},
-  {id:'balustrades',name:'Balustrades',icon:'images/category/cat-balustrades.png'},
+  {id:'columns',name:'Columns',icon:'🏛'},
+  {id:'cornices',name:'Cornices',icon:'🌿'},
+  {id:'medallions',name:'Medallions',icon:'⚜️'},
+  {id:'frames',name:'Frames',icon:'🪟'},
+  {id:'facade',name:'Façade',icon:'🏠'},
+  {id:'balustrades',name:'Balustrades',icon:'✨'},
 ];
 
-// EUR prices (approx /40 from UAH)
 const PRODUCTS = [
-  {id:1,name:'Classic Cornice KC-105',cat:'cornices',price:12,oldPrice:16,icon:'🌿',badge:'Best Seller',desc:'Classic cornice in pure gypsum. Width 105mm, ideal for rooms with 2.7–3.5m ceilings. Available in any length.',specs:{Material:'Gypsum',Width:'105mm',Length:'2000mm',Weight:'1,8 kg/m','Finish':'Raw (paintable)'}} ,
-  {id:2,name:'Ceiling Medallion MD-32',cat:'medallions',price:32,icon:'⚜️',desc:'Decorative ceiling rose for chandeliers. Diameter 320mm. Classical floral motif.',specs:{Material:'Gypsum',Diameter:'320mm',Thickness:'18mm',Weight:'2,1 kg','Finish':'Raw (paintable)'}},
-  {id:3,name:'Pilaster PL-48',cat:'columns',price:80,oldPrice:100,icon:'🌿',badge:'-20%',desc:'Full decorative pilaster with capital and base. Height 2400mm, width 480mm.',specs:{Material:'Gypsum',Height:'2400mm',Width:'480mm',Weight:'28 kg','Finish':'Raw (paintable)'}},
-  {id:4,name:'Ceiling Rose RS-18',cat:'medallions',price:19,icon:'🏠',desc:'Small decorative ceiling rose for pendant lights. Diameter 180mm.',specs:{Material:'Gypsum',Diameter:'180mm',Thickness:'12mm',Weight:'0,9 kg','Finish':'Raw (paintable)'}},
-  {id:5,name:'Balustrade BL-22',cat:'balustrades',price:22,icon:'✨',badge:'New',desc:'Classical balustrade spindle. Height 220mm, for railings and balconies.',specs:{Material:'Gypsum',Height:'220mm',Diameter:'80mm',Weight:'1,4 kg','Finish':'Raw (paintable)'}},
-  {id:6,name:'Arch Frame NL-07',cat:'frames',price:52,icon:'🪟',badge:'New',desc:'Decorative arch surround for doorways. Width 70mm, custom lengths available.',specs:{Material:'Gypsum',Width:'70mm',Length:'Sur mesure',Weight:'2,2 kg/m','Finish':'Raw (paintable)'}},
-  {id:7,name:'Ionic Column KL-120',cat:'columns',price:310,icon:'🏛',badge:'New',desc:'Full ionic column set: shaft, capital and base. Height 1200mm.',specs:{Material:'Gypsum',Height:'1200mm',Diameter:'180mm',Weight:'65 kg','Finish':'Raw (paintable)'}},
-  {id:8,name:'Cartouche KT-15',cat:'facade',price:36,icon:'⚜️',badge:'New',desc:'Wall-mounted decorative cartouche. 350×220mm, for interiors and exteriors.',specs:{Material:'Gypsum',Size:'350×220mm',Thickness:'40mm',Weight:'2,8 kg','Finish':'Raw (paintable)'}},
-  {id:9,name:'Façade Cornice FC-200',cat:'facade',price:17,icon:'🏠',desc:'Weather-resistant façade cornice. Width 200mm, reinforced gypsum composite.',specs:{Material:'Reinforced gypsum',Width:'200mm',Length:'2000mm',Weight:'3,2 kg/m','Finish':'White primer'}},
-  {id:10,name:'Rosette Window Frame',cat:'frames',price:90,icon:'🪟',desc:'Circular window surround with rosette motif. Inner diameter 600mm.',specs:{Material:'Gypsum',Size:'800×800mm',Thickness:'55mm',Weight:'12 kg','Finish':'Raw (paintable)'}},
-  {id:11,name:'Modillion Block MB-12',cat:'cornices',price:8,icon:'🌿',desc:'Decorative bracket for cornice systems. 120×80×60mm.',specs:{Material:'Gypsum',Size:'120×80×60mm',Weight:'0,6 kg','Finish':'Raw (paintable)'}},
-  {id:12,name:'Balustrade Rail',cat:'balustrades',price:28,icon:'✨',desc:'Top and bottom rail for balustrade systems. Length 2000mm.',specs:{Material:'Gypsum',Length:'2000mm',Height:'80mm',Weight:'4,1 kg','Finish':'Raw (paintable)'}},
+  {id:1,name:'Classic Cornice KC-105',cat:'cornices',price:480,oldPrice:620,icon:'🌿',badge:'Best Seller',desc:'Elegant classical cornice in pure gypsum. Width 105mm, ideal for rooms with 2.7–3.5m ceilings. Available in any length.',specs:{Material:'Gypsum',Width:'105mm',Length:'2000mm',Weight:'1.8 kg/m','Finish':'Raw (paintable)'}},
+  {id:2,name:'Ceiling Medallion MD-32',cat:'medallions',price:1250,icon:'⚜️',desc:'Decorative ceiling rose for chandeliers. Diameter 320mm. Classical floral motif.',specs:{Material:'Gypsum',Diameter:'320mm',Thickness:'18mm',Weight:'2.1 kg','Finish':'Raw (paintable)'}},
+  {id:3,name:'Pilaster PL-48',cat:'columns',price:3200,oldPrice:4000,icon:'🌿',badge:'-20%',desc:'Full decorative pilaster with capital and base. Height 2400mm, width 480mm.',specs:{Material:'Gypsum',Height:'2400mm',Width:'480mm',Weight:'28 kg','Finish':'Raw (paintable)'}},
+  {id:4,name:'Ceiling Rose RS-18',cat:'medallions',price:750,icon:'🏠',desc:'Small decorative ceiling rose for pendant lights. Diameter 180mm.',specs:{Material:'Gypsum',Diameter:'180mm',Thickness:'12mm',Weight:'0.9 kg','Finish':'Raw (paintable)'}},
+  {id:5,name:'Balustrade BL-22',cat:'balustrades',price:890,icon:'✨',badge:'New',desc:'Classical balustrade spindle. Height 220mm, for railings and balconies.',specs:{Material:'Gypsum',Height:'220mm',Diameter:'80mm',Weight:'1.4 kg','Finish':'Raw (paintable)'}},
+  {id:6,name:'Arch Frame NL-07',cat:'frames',price:2100,icon:'🪟',badge:'New',desc:'Decorative arch surround for doorways. Width 70mm, custom lengths available.',specs:{Material:'Gypsum',Width:'70mm',Length:'Custom',Weight:'2.2 kg/m','Finish':'Raw (paintable)'}},
+  {id:7,name:'Ionic Column KL-120',cat:'columns',price:12500,icon:'🏛',badge:'New',desc:'Full ionic column set: shaft, capital and base. Height 1200mm.',specs:{Material:'Gypsum',Height:'1200mm',Diameter:'180mm',Weight:'65 kg','Finish':'Raw (paintable)'}},
+  {id:8,name:'Cartouche KT-15',cat:'facade',price:1450,icon:'⚜️',badge:'New',desc:'Wall-mounted decorative cartouche. 350×220mm, for interiors and exteriors.',specs:{Material:'Gypsum',Size:'350×220mm',Thickness:'40mm',Weight:'2.8 kg','Finish':'Raw (paintable)'}},
+  {id:9,name:'Façade Cornice FC-200',cat:'facade',price:680,icon:'🏠',desc:'Weather-resistant façade cornice. Width 200mm, reinforced gypsum composite.',specs:{Material:'Reinforced gypsum',Width:'200mm',Length:'2000mm',Weight:'3.2 kg/m','Finish':'White primer'}},
+  {id:10,name:'Rosette Window Frame',cat:'frames',price:3600,icon:'🪟',desc:'Circular window surround with rosette motif. Inner diameter 600mm.',specs:{Material:'Gypsum',Size:'800×800mm',Thickness:'55mm',Weight:'12 kg','Finish':'Raw (paintable)'}},
+  {id:11,name:'Modillion Block MB-12',cat:'cornices',price:320,icon:'🌿',desc:'Decorative bracket for cornice systems. 120×80×60mm.',specs:{Material:'Gypsum',Size:'120×80×60mm',Weight:'0.6 kg','Finish':'Raw (paintable)'}},
+  {id:12,name:'Balustrade Rail',cat:'balustrades',price:1100,icon:'✨',desc:'Top and bottom rail for balustrade systems. Length 2000mm.',specs:{Material:'Gypsum',Length:'2000mm',Height:'80mm',Weight:'4.1 kg','Finish':'Raw (paintable)'}},
 ];
 
 const NEWS = [
-  {title:'New Riviera Façade Collection Launched',date:'April 12, 2026',excerpt:'Notre somptueuse nouvelle collection extérieure s\'inspire de l\'architecture méditerranéenne. 47 nouveaux produits disponibles.',icon:'🏠'},
+  {title:'New Riviera Façade Collection Launched',date:'April 12, 2026',excerpt:'Our stunning new outdoor collection is inspired by Mediterranean architecture. 47 new products now in stock.',icon:'🏠'},
   {title:'Spring Sale — Up to 30% Off Selected Items',date:'March 28, 2026',excerpt:'Limited-time discounts on our most popular interior décor pieces. Order before May 1st.',icon:'🎉'},
-  {title:'New Showroom Opens in Paris',date:'March 5, 2026',excerpt:'Visit our brand-new 400m² showroom at 15 Avenue des Champs-Élysées to see the full range in person.',icon:'🏛'},
-  {title:'Wholesale Partnership Programme',date:'February 14, 2026',excerpt:'We are expanding our partner network. Special pricing for architects, builders and interior designers.',icon:'🤝'},
+  {title:'New Showroom Opens in Kyiv',date:'March 5, 2026',excerpt:'Visit our brand-new 400m² showroom at Khreshchatyk 15 to see the full range of products in person.',icon:'🏛'},
+  {title:'Wholesale Partnership Programme',date:'February 14, 2026',excerpt:'We are expanding our partner network. Special pricing for architects, builders, and interior designers.',icon:'🤝'},
   {title:'How to Choose the Right Cornice',date:'January 22, 2026',excerpt:'Expert guide to selecting cornice proportions for different room heights and architectural styles.',icon:'📐'},
-  {title:'Installation Workshop — Paris',date:'January 8, 2026',excerpt:'Free hands-on installation workshop for professionals. Register now — limited places available.',icon:'🔧'},
+  {title:'Installation Workshop — Poltava',date:'January 8, 2026',excerpt:'Free hands-on installation workshop for professionals. Register now — limited places available.',icon:'🔧'},
 ];
 
 // ─── STATE ───────────────────────────────────────────────────────
-let cart = JSON.parse(localStorage.getItem('adg-cart-en')||'[]');
-let wishlist = JSON.parse(localStorage.getItem('adg-wish-en')||'[]');
+let cart = JSON.parse(localStorage.getItem('adg-cart')||'[]');
+let wishlist = JSON.parse(localStorage.getItem('adg-wish')||'[]');
 let currentPage = 'home';
 let heroIdx = 0;
+let catImages = {};
+let prodImages = {};
+let imgTarget = null;
+let imgTargetType = null;
 let payMethod = 'card';
 let activeChannel = 'email';
 let activeChannelM = 'email';
 let discount = 0;
+let galImages = [];
 let filteredCat = 'all';
 
 // ─── NAV ─────────────────────────────────────────────────────────
 function nav(page) {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const pg = document.getElementById('page-'+page);
-  if(pg) pg.classList.add('active');
+  if(pg){pg.classList.add('active');}
   currentPage = page;
   document.querySelectorAll('.nav-ul a').forEach(a=>{
     a.classList.toggle('cur', a.dataset.page===page);
   });
-  // Close mobile nav
-  document.getElementById('nav-ul').classList.remove('open');
-  document.getElementById('mob-nav-btn').textContent='☰';
   window.scrollTo({top:0,behavior:'smooth'});
-  if(page==='home') renderHome();
-  if(page==='catalog') renderCatalog();
-  if(page==='news') renderNews();
-  if(page==='gallery') renderGallery();
-  if(page==='checkout') renderCheckout();
-}
-
-function toggleMobNav(){
-  const ul=document.getElementById('nav-ul');
-  const btn=document.getElementById('mob-nav-btn');
-  ul.classList.toggle('open');
-  btn.textContent=ul.classList.contains('open')?'✕':'☰';
+  if(page==='home'){renderHome();}
+  if(page==='catalog'){renderCatalog();}
+  if(page==='news'){renderNews();}
+  if(page==='gallery'){renderGallery();}
+  if(page==='checkout'){renderCheckout();}
 }
 
 // ─── HERO ─────────────────────────────────────────────────────────
@@ -1127,9 +1226,6 @@ function updateHero(){
 }
 setInterval(()=>heroSlide(1),5000);
 
-// ─── PRICE FORMAT ─────────────────────────────────────────────────
-function fmt(n){return n.toLocaleString('fr-FR');}
-
 // ─── RENDER HOME ─────────────────────────────────────────────────
 function renderHome(){
   renderCatsMini();
@@ -1139,42 +1235,48 @@ function renderHome(){
 
 function renderCatsMini(){
   const el=document.getElementById('home-cats');
-  if(!el) return;
+  if(!el)return;
   el.innerHTML=CATS.map(c=>`
     <div class="cat-card" onclick="filterCat('${c.id}',null);nav('catalog')">
-      <div class="cat-img"><img class="cat-img-obj" src="${c.icon}"></img></div>
+      <div class="cat-img">
+        ${catImages[c.id]?`<img src="${catImages[c.id]}" alt="${c.name}">`:`<span>${c.icon}</span>`}
+        <button class="change-img-btn" onclick="event.stopPropagation();openImgUp('cat','${c.id}')">Change Image</button>
+      </div>
       <p class="cat-nm">${c.name}</p>
     </div>`).join('');
 }
 
 function renderProductGrid(containerId, products){
   const el=document.getElementById(containerId);
-  if(!el) return;
+  if(!el)return;
   el.innerHTML=products.map(p=>prodCardHTML(p)).join('');
 }
 
 function prodCardHTML(p){
   const inW=wishlist.includes(p.id);
   const inC=cart.find(i=>i.id===p.id);
+  const img=prodImages[p.id];
   return`<div class="prod-card">
     ${p.badge?`<span class="prod-badge">${p.badge}</span>`:''}
-    <button class="wish-btn${inW?' active':''}" onclick="toggleWish(${p.id},this)" title="Favoris">${inW?'♥':'♡'}</button>
+    <button class="wish-btn${inW?' active':''}" onclick="toggleWish(${p.id},this)" title="Wishlist">♡</button>
     <div class="prod-img" onclick="openProduct(${p.id})">
-      <span>${p.icon}</span>
+      ${img?`<img src="${img}" alt="${p.name}">`:`<span>${p.icon}</span>`}
       <div class="prod-img-overlay">
         <button onclick="event.stopPropagation();openProduct(${p.id})">Quick View</button>
+        <button onclick="event.stopPropagation();openImgUp('prod',${p.id})">Change Image</button>
       </div>
     </div>
     <div class="prod-body">
       <p class="prod-nm">${p.name}</p>
       <div class="prod-prc">
-        <span class="prc-now">${fmt(p.price)} €</span>
-        ${p.oldPrice?`<span class="prc-old">${fmt(p.oldPrice)} €</span>`:''}
+        <span class="prc-now">₴${p.price.toLocaleString()}</span>
+        ${p.oldPrice?`<span class="prc-old">₴${p.oldPrice.toLocaleString()}</span>`:''}
       </div>
+      <button class="btn-add${inC?' added':''}" onclick="addToCart(${p.id},this)">${inC?'✓ In Cart':'Add to Cart'}</button>
     </div>
   </div>`;
 }
-/*<button class="btn-add${inC?' added':''}" onclick="addToCart(${p.id},this)">${inC?'✓ In Cart':'Add to Cart'}</button> */
+
 // ─── CATALOG ─────────────────────────────────────────────────────
 function renderCatalog(){
   let products=[...PRODUCTS];
@@ -1188,11 +1290,12 @@ function filterCat(cat, btn){
   document.querySelectorAll('#filter-bar .filter-tag').forEach(b=>{
     b.classList.toggle('active', b.dataset.cat===cat);
   });
+  if(btn){btn.classList.add('active');}
   renderCatalog();
 }
 
 function sortProducts(val){
-  if(!val) return;
+  if(!val)return;
   let products=[...PRODUCTS];
   if(filteredCat!=='all') products=products.filter(p=>p.cat===filteredCat);
   if(val==='price-asc') products.sort((a,b)=>a.price-b.price);
@@ -1205,22 +1308,33 @@ function sortProducts(val){
 // ─── PRODUCT DETAIL ───────────────────────────────────────────────
 function openProduct(id){
   const p=PRODUCTS.find(x=>x.id===id);
-  if(!p) return;
+  if(!p)return;
+  const img=prodImages[id];
   document.getElementById('pdp-crumb').innerHTML=
     `<a href="#" onclick="nav('home');return false">Home</a> <span>/ <a href="#" onclick="nav('catalog');return false">Catalogue</a></span> <span>/ ${p.name}</span>`;
   document.getElementById('pdp-content').innerHTML=`
     <div class="pdp-imgs">
-      <div class="pdp-main-img" style="font-size:80px">${p.icon}</div>
+      <div class="pdp-main-img" id="pdp-main">
+        ${img?`<img src="${img}" alt="${p.name}">`:`<span>${p.icon}</span>`}
+      </div>
       <div class="pdp-thumbs">
-        <div class="pdp-thumb active"><span style="font-size:24px">${p.icon}</span></div>
+        <div class="pdp-thumb active" onclick="selectThumb(this,${id})">
+          ${img?`<img src="${img}" alt="">`:`<span>${p.icon}</span>`}
+        </div>
+        <div class="pdp-thumb" style="opacity:.4;cursor:pointer" onclick="openImgUp('prod',${id})">
+          <span style="font-size:20px;color:var(--gold)">+</span>
+        </div>
+      </div>
+      <div class="upload-zone" onclick="openImgUp('prod',${id})">
+        <p>📸 Upload / change product image</p>
       </div>
     </div>
     <div class="pdp-info">
       <span class="sec-lbl">${CATS.find(c=>c.id===p.cat)?.name||''}</span>
       <h1 style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;margin-bottom:8px">${p.name}</h1>
       <div style="display:flex;align-items:baseline;gap:0">
-        <span class="price-big">${fmt(p.price)} €</span>
-        ${p.oldPrice?`<span class="old-p">${fmt(p.oldPrice)} €</span>`:''}
+        <span class="price-big">₴${p.price.toLocaleString()}</span>
+        ${p.oldPrice?`<span class="old-p">₴${p.oldPrice.toLocaleString()}</span>`:''}
       </div>
       <p class="desc">${p.desc}</p>
       <div class="pdp-specs">
@@ -1234,8 +1348,8 @@ function openProduct(id){
           <button onclick="pdpQty(1)">+</button>
         </div>
       </div>
-      <div style="display:flex;gap:14px;flex-wrap:wrap">
-        <button class="btn-p" style="flex:1;min-width:160px" onclick="addToCartPDP(${id})">Add to Cart</button>
+      <div style="display:flex;gap:14px">
+        <button class="btn-p" style="flex:1" onclick="addToCartPDP(${id})">Add to Cart</button>
         <button class="btn-o" onclick="toggleWish(${id},this)">♡ Wishlist</button>
       </div>
     </div>`;
@@ -1244,15 +1358,15 @@ function openProduct(id){
 
 function pdpQty(d){
   const el=document.getElementById('pdp-qty');
-  if(!el) return;
+  if(!el)return;
   const v=parseInt(el.textContent)+d;
-  if(v>=1) el.textContent=v;
+  if(v>=1)el.textContent=v;
 }
 
 function addToCartPDP(id){
   const qty=parseInt(document.getElementById('pdp-qty')?.textContent||1);
   const p=PRODUCTS.find(x=>x.id===id);
-  if(!p) return;
+  if(!p)return;
   const ex=cart.find(i=>i.id===id);
   if(ex){ex.qty+=qty;}else{cart.push({id,name:p.name,price:p.price,icon:p.icon,qty});}
   saveCart();
@@ -1262,7 +1376,7 @@ function addToCartPDP(id){
 // ─── CART ─────────────────────────────────────────────────────────
 function addToCart(id, btn){
   const p=PRODUCTS.find(x=>x.id===id);
-  if(!p) return;
+  if(!p)return;
   const ex=cart.find(i=>i.id===id);
   if(ex){ex.qty++;}else{cart.push({id,name:p.name,price:p.price,icon:p.icon,qty:1});}
   saveCart();
@@ -1271,7 +1385,7 @@ function addToCart(id, btn){
 }
 
 function saveCart(){
-  localStorage.setItem('adg-cart-en',JSON.stringify(cart));
+  localStorage.setItem('adg-cart',JSON.stringify(cart));
   updateCartBadge();
   renderCartPanel();
 }
@@ -1289,39 +1403,42 @@ function renderCartPanel(){
     return;
   }
   document.getElementById('cart-foot').style.opacity='1';
-  el.innerHTML=cart.map(item=>`<div class="cart-item">
-    <div class="ci-img"><span>${item.icon}</span></div>
-    <div class="ci-info">
-      <p class="ci-nm">${item.name}</p>
-      <p class="ci-prc">${fmt(item.price)} € / each</p>
-      <div class="ci-qty">
-        <button onclick="changeQty(${item.id},-1)">−</button>
-        <span>${item.qty}</span>
-        <button onclick="changeQty(${item.id},1)">+</button>
+  el.innerHTML=cart.map(item=>{
+    const img=prodImages[item.id];
+    return`<div class="cart-item">
+      <div class="ci-img">${img?`<img src="${img}" alt="">`:`<span>${item.icon}</span>`}</div>
+      <div class="ci-info">
+        <p class="ci-nm">${item.name}</p>
+        <p class="ci-prc">₴${item.price.toLocaleString()} each</p>
+        <div class="ci-qty">
+          <button onclick="changeQty(${item.id},-1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="changeQty(${item.id},1)">+</button>
+        </div>
       </div>
-    </div>
-    <button class="ci-del" onclick="removeFromCart(${item.id})">✕</button>
-  </div>`).join('');
+      <button class="ci-del" onclick="removeFromCart(${item.id})">✕</button>
+    </div>`;
+  }).join('');
   const sub=cartSubtotal();
   const total=Math.round(sub*(1-discount));
-  document.getElementById('cart-total-val').textContent=`${fmt(total)} €`;
+  document.getElementById('cart-total-val').textContent=`₴${total.toLocaleString()}`;
 }
 
 function cartSubtotal(){return cart.reduce((s,i)=>s+i.price*i.qty,0);}
 
 function changeQty(id,d){
   const item=cart.find(i=>i.id===id);
-  if(!item) return;
+  if(!item)return;
   item.qty+=d;
-  if(item.qty<=0) cart=cart.filter(i=>i.id!==id);
+  if(item.qty<=0)cart=cart.filter(i=>i.id!==id);
   saveCart();
 }
 
 function removeFromCart(id){
   cart=cart.filter(i=>i.id!==id);
   saveCart();
-  if(currentPage==='catalog') renderCatalog();
-  if(currentPage==='home') renderHome();
+  if(currentPage==='catalog'){renderCatalog();}
+  if(currentPage==='home'){renderHome();}
 }
 
 function toggleCart(){
@@ -1343,23 +1460,14 @@ function toggleWish(id, btn){
   const idx=wishlist.indexOf(id);
   if(idx>=0){wishlist.splice(idx,1);toast('Removed from wishlist','info');}
   else{wishlist.push(id);toast('Added to wishlist','info');}
-  localStorage.setItem('adg-wish-en',JSON.stringify(wishlist));
+  localStorage.setItem('adg-wish',JSON.stringify(wishlist));
   if(btn){btn.classList.toggle('active',wishlist.includes(id));btn.textContent=wishlist.includes(id)?'♥':'♡';}
 }
 
 // ─── SEARCH ───────────────────────────────────────────────────────
 function doSearch(){
   const q=document.getElementById('srch-input').value.trim().toLowerCase();
-  if(!q) return;
-  runSearch(q);
-}
-function doSearchMob(){
-  const q=document.getElementById('mob-srch-input').value.trim().toLowerCase();
-  if(!q) return;
-  document.getElementById('mob-search-bar').classList.remove('open');
-  runSearch(q);
-}
-function runSearch(q){
+  if(!q)return;
   const results=PRODUCTS.filter(p=>p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q));
   document.getElementById('srch-ttl').textContent=`"${q}"`;
   const el=document.getElementById('search-grid');
@@ -1369,61 +1477,62 @@ function runSearch(q){
 
 // ─── GALLERY ─────────────────────────────────────────────────────
 const GAL_ITEMS=[
-  {icon:'🏛',cat:'interior',label:'Living room columns — Paris'},
-  {icon:'🌿',cat:'interior',label:'Cornice installation — Lyon'},
-  {icon:'🏠',cat:'exterior',label:'Façade décor — Nice'},
-  {icon:'⚜️',cat:'interior',label:'Ceiling medallion — Bordeaux'},
-  {icon:'✨',cat:'exterior',label:'Balustrade terrace — Marseille'},
-  {icon:'🪟',cat:'custom',label:'Custom arch frames — Toulouse'},
-  {icon:'🏛',cat:'exterior',label:'Column portico — Strasbourg'},
-  {icon:'🌿',cat:'interior',label:'Dining room cornice — Paris'},
-  {icon:'⚜️',cat:'custom',label:'Bespoke ceiling — Nantes'},
+  {icon:'🏛',cat:'interior',label:'Living room columns — Kyiv'},
+  {icon:'🌿',cat:'interior',label:'Cornice installation — Lviv'},
+  {icon:'🏠',cat:'exterior',label:'Façade décor — Odessa'},
+  {icon:'⚜️',cat:'interior',label:'Ceiling medallion — Dnipro'},
+  {icon:'✨',cat:'exterior',label:'Balustrade terrace — Kharkiv'},
+  {icon:'🪟',cat:'custom',label:'Custom arch frames — Zaporizhzhia'},
+  {icon:'🏛',cat:'exterior',label:'Column portico — Poltava'},
+  {icon:'🌿',cat:'interior',label:'Dining room cornice — Kyiv'},
+  {icon:'⚜️',cat:'custom',label:'Bespoke ceiling — Lviv'},
 ];
 let galFilter='all';
 function filterGal(cat,btn){
   galFilter=cat;
-  document.querySelectorAll('#page-gallery .filter-tag').forEach(b=>{
-    b.classList.remove('active');
-    if((cat==='all'&&b.textContent==='All')||(b.textContent.toLowerCase().includes(cat))) b.classList.add('active');
-  });
+  document.querySelectorAll('#page-gallery .filter-tag').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase().includes(cat)||cat==='all'&&b.textContent==='All'));
   renderGallery();
 }
 function renderGallery(){
   const el=document.getElementById('gallery-grid');
-  if(!el) return;
-  let items=[...GAL_ITEMS];
+  if(!el)return;
+  let items=[...GAL_ITEMS,...galImages.map((src,i)=>({src,icon:'🖼',cat:'interior',label:'Your upload'}))];
   if(galFilter!=='all') items=items.filter(i=>i.cat===galFilter);
   el.innerHTML=items.map((item,i)=>`
-    <div class="gal-item${i===0?' gal-item-big':''}" onclick="openLightbox('${item.icon}')" style="cursor:pointer">
-      <span>${item.icon}</span>
+    <div class="gal-item${i===0?' gal-item-big':''}" onclick="openLightbox('${item.src||''}','${item.icon}')">
+      ${item.src?`<img src="${item.src}" alt="${item.label}">`:`<span>${item.icon}</span>`}
     </div>`).join('');
 }
-function openLightbox(icon){
-  document.getElementById('lb-icon').textContent=icon;
-  const lb=document.getElementById('lightbox');
-  lb.style.opacity='1';lb.style.pointerEvents='all';
+function uploadGallery(input){
+  Array.from(input.files).forEach(f=>{
+    const r=new FileReader();
+    r.onload=e=>{galImages.push(e.target.result);renderGallery();};
+    r.readAsDataURL(f);
+  });
 }
-function closeLightbox(){
-  const lb=document.getElementById('lightbox');
-  lb.style.opacity='0';lb.style.pointerEvents='none';
+function openLightbox(src,icon){
+  if(!src)return;
+  document.getElementById('lb-img').src=src;
+  document.getElementById('lightbox').classList.add('open');
 }
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
 
 // ─── CHECKOUT ─────────────────────────────────────────────────────
 function renderCheckout(){
   const el=document.getElementById('checkout-items');
-  if(!el) return;
+  if(!el)return;
   el.innerHTML=cart.map(i=>`
     <div style="display:flex;justify-content:space-between;font-size:14px;color:var(--stone);margin-bottom:8px">
       <span>${i.name} ×${i.qty}</span>
-      <span>${fmt(i.price*i.qty)} €</span>
+      <span>₴${(i.price*i.qty).toLocaleString()}</span>
     </div>`).join('');
   const sub=cartSubtotal();
-  const del=8;
+  const del=80;
   const total=Math.round(sub*(1-discount))+del;
-  document.getElementById('co-sub').textContent=fmt(Math.round(sub*(1-discount)))+' €';
-  document.getElementById('co-del').textContent=del+' €';
-  document.getElementById('co-total').textContent=fmt(total)+' €';
-  document.getElementById('order-total-btn').textContent=fmt(total);
+  document.getElementById('co-sub').textContent='₴'+Math.round(sub*(1-discount)).toLocaleString();
+  document.getElementById('co-del').textContent='₴'+del;
+  document.getElementById('co-total').textContent='₴'+total.toLocaleString();
+  document.getElementById('order-total-btn').textContent=total.toLocaleString();
 }
 
 function checkoutStep(n){
@@ -1431,7 +1540,7 @@ function checkoutStep(n){
     document.getElementById('step'+i).classList.toggle('active',i===n);
     const tab=document.getElementById('step'+i+'-tab');
     tab.classList.toggle('active',i===n);
-    if(i<n) tab.classList.add('done'); else tab.classList.remove('done');
+    if(i<n)tab.classList.add('done'); else tab.classList.remove('done');
   }
   renderCheckout();
 }
@@ -1457,7 +1566,8 @@ function placeOrder(){
   }
   const fn=document.getElementById('ch-fname').value;
   const ln=document.getElementById('ch-lname').value;
-  if(!fn||!ln){toast('Veuillez remplir vos coordonnées à l\'étape 1','error');checkoutStep(1);return;}
+  if(!fn||!ln){toast('Please fill in your name on step 1','error');checkoutStep(1);return;}
+  // Simulate payment processing
   toast('Processing payment...','info');
   setTimeout(()=>{
     const orderNum='ADG-'+Date.now().toString().slice(-6);
@@ -1471,7 +1581,7 @@ function placeOrder(){
 // ─── NEWS ─────────────────────────────────────────────────────────
 function renderNews(){
   const el=document.getElementById('news-grid');
-  if(!el) return;
+  if(!el)return;
   el.innerHTML=NEWS.map(n=>`
     <div class="news-card">
       <div class="news-img"><span>${n.icon}</span></div>
@@ -1481,6 +1591,39 @@ function renderNews(){
         <p class="news-ex">${n.excerpt}</p>
       </div>
     </div>`).join('');
+}
+
+// ─── IMAGE UPLOAD ─────────────────────────────────────────────────
+function openImgUp(type, id){
+  imgTargetType=type;
+  imgTarget=id;
+  document.getElementById('img-url-input').value='';
+  openModal('modal-imgup');
+}
+
+function handleImgFile(input){
+  const file=input.files[0];
+  if(!file)return;
+  const r=new FileReader();
+  r.onload=e=>{applyImg(e.target.result);};
+  r.readAsDataURL(file);
+  closeModal('modal-imgup');
+}
+
+function applyImgUrl(){
+  const url=document.getElementById('img-url-input').value.trim();
+  if(!url){toast('Please enter a URL','error');return;}
+  applyImg(url);
+  closeModal('modal-imgup');
+}
+
+function applyImg(src){
+  if(imgTargetType==='cat'){catImages[imgTarget]=src;}
+  else if(imgTargetType==='prod'){prodImages[imgTarget]=src;}
+  toast('Image updated successfully','success');
+  if(currentPage==='home'){renderHome();}
+  else if(currentPage==='catalog'){renderCatalog();}
+  else if(currentPage==='product'){openProduct(imgTarget);}
 }
 
 // ─── MESSAGING ────────────────────────────────────────────────────
@@ -1515,15 +1658,20 @@ function dispatchMessage(channel,name,contact,msg,statusId){
   const el=document.getElementById(statusId);
   if(channel==='telegram'){
     const text=encodeURIComponent(`New inquiry from ${name} (${contact}):\n${msg}`);
-    window.open(`https://t.me/share/url?url=https://artdegypse.fr&text=${text}`,'_blank');
+    window.open(`https://t.me/share/url?url=https://artdegypse.com&text=${text}`,'_blank');
     showStatus(el,true,'Message prepared for Telegram');
   } else if(channel==='whatsapp'){
-    const text=encodeURIComponent(`Bonjour, je suis ${name} (${contact}). ${msg}`);
-    window.open(`https://wa.me/33142682205?text=${text}`,'_blank');
+    const text=encodeURIComponent(`Hi, I'm ${name} (${contact}). ${msg}`);
+    window.open(`https://wa.me/380996812205?text=${text}`,'_blank');
     showStatus(el,true,'Message prepared for WhatsApp');
+  } else if(channel==='viber'){
+    const text=encodeURIComponent(`Hi, I'm ${name} (${contact}). ${msg}`);
+    window.open(`viber://chat?number=%2B380996812205&text=${text}`,'_blank');
+    showStatus(el,true,'Opening Viber...');
   } else {
+    // Email simulation
     setTimeout(()=>{
-      showStatus(el,true,`Email sent to contact@artdegypse.fr! We will reply within 1 business day.`);
+      showStatus(el,true,`Email sent to ermitagedecor@gmail.com! We'll reply within 1 business day.`);
       toast('Message sent successfully','success');
     },800);
   }
@@ -1534,17 +1682,18 @@ function submitCall(){
   const phone=document.getElementById('rc-phone').value.trim();
   if(!name||!phone){toast('Please fill all fields','error');return;}
   setTimeout(()=>{
-    showStatus(document.getElementById('call-status'),true,`Thank you, ${name} ! We'll call you at ${phone} very soon.`);
+    showStatus(document.getElementById('call-status'),true,`Thank you, ${name}! We'll call you at ${phone} soon.`);
     toast('Call request sent','success');
   },600);
 }
 
 function showStatus(el,ok,msg){
-  if(!el) return;
+  if(!el)return;
   el.className='msg-status '+(ok?'msg-ok':'msg-err');
   el.textContent=msg;
 }
 
+// ─── SUBSCRIBE ────────────────────────────────────────────────────
 function subscribeEmail(){
   const em=document.getElementById('f-email').value.trim();
   if(!em||!em.includes('@')){toast('Please enter a valid email','error');return;}
@@ -1552,12 +1701,14 @@ function subscribeEmail(){
   document.getElementById('f-email').value='';
 }
 
+// ─── MODAL ────────────────────────────────────────────────────────
 function openModal(id){document.getElementById(id).classList.add('open');}
 function closeModal(id){document.getElementById(id).classList.remove('open');}
 document.querySelectorAll('.modal-overlay').forEach(m=>{
-  m.addEventListener('click',e=>{if(e.target===m) m.classList.remove('open');});
+  m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');});
 });
 
+// ─── TOAST ────────────────────────────────────────────────────────
 function toast(msg,type='info'){
   const w=document.getElementById('toast-wrap');
   const t=document.createElement('div');
@@ -1567,10 +1718,24 @@ function toast(msg,type='info'){
   setTimeout(()=>{t.style.opacity='0';t.style.transition='opacity .4s';setTimeout(()=>t.remove(),400);},3000);
 }
 
+// ─── EXTERNAL PRODUCT DATA (Open Library API demo) ───────────────
+async function loadExternalData(){
+  try{
+    const r=await fetch("https://openlibrary.org/subjects/architecture.json?limit=3");
+    const d=await r.json();
+    if(d.works&&d.works.length){
+      const titles=d.works.slice(0,3).map(w=>w.title).join(', ');
+      console.log('Architecture books from Open Library:',titles);
+      toast('📚 External data loaded: architecture references','info');
+    }
+  }catch(e){console.log('External API note:',e.message);}
+}
+
 // ─── INIT ─────────────────────────────────────────────────────────
 renderHome();
 updateCartBadge();
 renderCartPanel();
+setTimeout(loadExternalData,2000);
 </script>
 </body>
 </html>
