@@ -45,7 +45,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .nav{display:flex;align-items:center;padding:0 60px}
 .nav-cat{background:var(--char);color:#fff;padding:14px 22px;font-size:12px;letter-spacing:.15em;text-transform:uppercase;border:none;font-weight:400;transition:background .2s;margin-right:30px;white-space:nowrap}
 .nav-cat:hover{background:var(--gold-d)}
-.nav-ul{display:flex;list-style:none;flex:1;gap:0}
+.nav-ul{display:flex;list-style:none;flex:1;gap:0;justify-content: center;}
 .nav-ul a{display:block;padding:14px 12px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);transition:color .2s;position:relative;white-space:nowrap}
 .nav-ul a::after{content:'';position:absolute;bottom:0;left:50%;right:50%;height:2px;background:var(--gold);transition:left .25s,right .25s}
 .nav-ul a:hover{color:var(--char)}
@@ -321,6 +321,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .f-submit:hover{background:var(--gold-d)}
 .f-socials{display:flex;gap:10px}
 .f-soc{width:36px;height:36px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;border-radius:2px;transition:all .2s}
+/* .f-soc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;} */
 .f-soc:hover{border-color:var(--gold);color:var(--gold)}
 .f-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.3);flex-wrap:wrap;gap:8px}
 .f-bot a{color:var(--gold)}
@@ -338,7 +339,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
   .hdr-top{padding:12px 28px}
   .nav{padding:0 28px; display: flex;}
   .nav-cat{padding:12px 14px;font-size:11px;margin-right:16px}
-  .nav-ul a{padding:12px 8px;font-size:11px;  justify-content: center;}
+  .nav-ul a{padding:12px 8px;font-size:11px; justify-content: center;}
   .sec{padding:48px 28px}
   .hero-cnt{padding:0 60px}
   .hero-ttl{font-size:52px}
@@ -479,7 +480,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <button onclick="doSearch()">🔍</button>
     </div>
     <div class="hdr-c">
-      <span class="ph">+33 (0)1 42 68 22 05</span>
+      <span class="ph">+33 7 66 94 99 70</span>
       <span class="em">contact@artdegypse.fr</span>
     </div>
     <!--<button class="btn-call" onclick="openModal('modal-call')">Call Back 📞</button>-->
@@ -536,9 +537,9 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       </div>
       <div class="hero-slide hs3">
         <div class="hero-cnt">
-          <span class="hero-lbl">Up to 30% Off</span>
-          <h1 class="hero-ttl">Spring<br><em>Sale</em><br>&amp; Specials</h1>
-          <p class="hero-dsc">Selected items at reduced prices. Elevate your project with premium décor for less.</p>
+          <span class="hero-lbl">Facade Decor</span>
+          <h1 class="hero-ttl">Built<br><em>to</em><br> Impress</h1>
+          <p class="hero-dsc">Durable exterior gypsum elements created for refined architectural design and long-lasting beauty.</p>
           <div class="hero-btns"><button class="btn-p" onclick="nav('catalog')">Shop Sale</button></div>
         </div>
         <img class="hero_slide-image" src="images/banners/banner-spring.jpg" alt="Image banner slide 3"></img>
@@ -732,16 +733,16 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
       <div class="stat-box"><div class="stat-num">100%</div><div class="stat-lbl">Made in France</div></div>
     </div>
   </section>
-  <section class="sec">
+  <!--<section class="sec">
     <div class="sec-hdr">
       <div><span class="sec-lbl">Our People</span><h2 class="sec-ttl">Meet the Team</h2></div>
     </div>
-    <div class="team-grid">
+     <div class="team-grid">
       <div class="team-card"><div class="team-av">👨‍💼</div><p class="team-nm">Pierre Dumont</p><p class="team-role">Fondateur & Directeur</p></div>
       <div class="team-card"><div class="team-av">👩‍🎨</div><p class="team-nm">Marie Laurent</p><p class="team-role">Head of Design</p></div>
       <div class="team-card"><div class="team-av">👨‍🔧</div><p class="team-nm">Jean Moreau</p><p class="team-role">Master Craftsman</p></div>
       <div class="team-card"><div class="team-av">👩‍💻</div><p class="team-nm">Sophie Bernard</p><p class="team-role">Client Relations</p></div>
-    </div>
+    </div> -->
   </section>
 </div>
 
@@ -821,19 +822,19 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
   <div class="contact-grid">
     <div class="contact-left">
       <h2>Get in Touch</h2>
-      <div class="cinfo-row"><span class="cinfo-icon">📍</span><div><strong>Address</strong><br>12 Rue du Faubourg Saint-Honoré, 75008 Paris, France</div></div>
-      <div class="cinfo-row"><span class="cinfo-icon">📞</span><div><strong>Phone</strong><br>+33 (0)1 42 68 22 05<br>+33 (0)1 42 34 56 78</div></div>
+      <div class="cinfo-row"><span class="cinfo-icon">📍</span><div><strong>Address</strong><br>06500 Menton, France</div></div>
+      <div class="cinfo-row"><span class="cinfo-icon">📞</span><div><strong>Phone</strong><br>+33 7 66 94 99 70</div></div>
       <div class="cinfo-row"><span class="cinfo-icon">✉️</span><div><strong>Email</strong><br>contact@artdegypse.fr</div></div>
-      <div class="cinfo-row"><span class="cinfo-icon">🕐</span><div><strong>Working Hours</strong><br>Mon–Fri: 9:00–18:00<br>Sat: 10:00–16:00</div></div>
+      <div class="cinfo-row"><span class="cinfo-icon">🕐</span><div><strong>Working Hours</strong><br>Mon–Fri: 8:00–19:00<br>Sat: 8:00–19:00</div></div>
       <div class="social-links">
-        <a href="#" class="sl-btn">f</a>
-        <a href="#" class="sl-btn">in</a>
-        <a href="#" class="sl-btn">ig</a>
-        <a href="https://t.me/artdegypse" class="sl-btn">✈</a>
+        <!-- <a href="#" class="sl-btn">f</a> -->
+        <a href="https://www.instagram.com/_lepnina__cotedazur/" class="sl-btn">in</a>
+        <!-- <a href="#" class="sl-btn">ig</a> -->
+        <a href="https://t.me/Toxxa777" class="sl-btn">✈</a>
       </div>
-      <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83999.45!2d2.3200!3d48.8700!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1234567890" allowfullscreen loading="lazy"></iframe>
+      <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26470.807584595208!2d7.48876094386277!3d43.782781120740296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdebbec4ca024f%3A0x40819a5fd979ac0!2zMDY1MDAg0JzQsNC90YLQvtC9LCDQpNGA0LDQvdGG0ZbRjw!5e0!3m2!1suk!2sua!4v1778209670330!5m2!1suk!2sua" allowfullscreen loading="lazy"></iframe>
     </div>
-    <div class="contact-right">
+    <!--<div class="contact-right">
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;margin-bottom:24px">Send a Message</h2>
       <p style="font-size:13px;color:var(--stone);margin-bottom:16px">Choose how you would like to be contacted:</p>
       <div class="msg-channels" id="contact-channels">
@@ -841,12 +842,12 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
         <button class="ch-btn" data-ch="telegram" onclick="setChannel(this)">✈ Telegram</button>
         <button class="ch-btn" data-ch="whatsapp" onclick="setChannel(this)">📱 WhatsApp</button>
       </div>
-      <div class="form-row"><label>Your Name</label><input id="c-name" type="text" placeholder="John Smith"></div>
+       <div class="form-row"><label>Your Name</label><input id="c-name" type="text" placeholder="John Smith"></div>
       <div class="form-row"><label>Phone / Email</label><input id="c-contact" type="text" placeholder="+33 6 XX XX XX XX or email@example.com"></div>
       <div class="form-row"><label>Message</label><textarea id="c-msg" placeholder="Tell us about your project..."></textarea></div>
       <button class="btn-p" onclick="sendContactMsg()" style="width:100%;text-align:center">Send Message</button>
-      <div id="contact-status" class="msg-status hidden"></div>
-    </div>
+      <div id="contact-status" class="msg-status hidden"></div> 
+    </div> -->
   </div>
 </div>
 
@@ -925,7 +926,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
   </section>
 </div> -->
 
-<!-- SUCCESS -->
+<!-- SUCCESS 
 <div id="page-success" class="page">
   <section class="sec" style="text-align:center;padding:100px 60px">
     <div style="font-size:80px;margin-bottom:24px">✅</div>
@@ -934,9 +935,9 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     <p id="order-confirm-num" style="font-size:14px;color:var(--stone);margin-bottom:32px"></p>
     <button class="btn-p" onclick="nav('home')">Continue Shopping</button>
   </section>
-</div>
+</div> -->
 
-<!-- CART -->
+<!-- CART 
 <div id="cart-overlay" onclick="toggleCart()"></div>
 <div id="cart-panel">
   <div class="cart-hdr">
@@ -952,9 +953,9 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     <div class="cart-total"><span>Total:</span><span id="cart-total-val">0 €</span></div>
     <button class="btn-p" style="width:100%;text-align:center;display:block;padding:14px" onclick="toggleCart();nav('checkout')">Proceed to Checkout</button>
   </div>
-</div>
+</div> -->
 
-<!-- MODALS -->
+<!-- MODALS 
 <div class="modal-overlay" id="modal-call">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('modal-call')">✕</button>
@@ -972,9 +973,9 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     <button class="btn-p" style="width:100%;margin-top:8px" onclick="submitCall()">Send Request</button>
     <div id="call-status" class="msg-status hidden"></div>
   </div>
-</div>
+</div> -->
 
-<div class="modal-overlay" id="modal-contact">
+<!-- <div class="modal-overlay" id="modal-contact">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('modal-contact')">✕</button>
     <h2>Send a Message</h2>
@@ -989,7 +990,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
     <button class="btn-p" style="width:100%" onclick="sendModalMsg()">Envoyer</button>
     <div id="modal-msg-status" class="msg-status hidden"></div>
   </div>
-</div>
+</div>-->
 
 <div id="lightbox" style="position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:700;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s" onclick="closeLightbox()">
   <button id="lightbox-close" style="position:absolute;top:24px;right:32px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer" onclick="closeLightbox()">✕</button>
@@ -1011,17 +1012,17 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
         <!-- <li><button onclick="nav('delivery')">Payment & Delivery</button></li> -->
         <li><button onclick="nav('about')">About Us</button></li>
         <li><button onclick="nav('services')">Services</button></li>
-        <li><a href="#">Returns & Exchanges</a></li>
-        <li><a href="#">3D Showroom Tour</a></li>
+        <!-- <li><a href="#">Returns & Exchanges</a></li>
+        <li><a href="#">3D Showroom Tour</a></li> -->
       </ul>
     </div>
     <div>
       <p class="f-col-title">Catalogue</p>
       <ul class="f-links">
         <li><button onclick="nav('catalog')">All Products</button></li>
-        <li><a href="#">Sale Items</a></li>
-        <li><a href="#">Wholesale</a></li>
-        <li><a href="#">Custom Orders</a></li>
+        <li><button onclick="nav('catalog')">Sale Items</button></li>
+        <!-- <li><a href="#">Wholesale</a></li>
+        <li><a href="#">Custom Orders</a></li> -->
       </ul>
     </div>
     <div>
@@ -1032,15 +1033,15 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
         <button class="f-submit" onclick="subscribeEmail()">→</button> 
       </div> -->
       <div class="f-socials">
-        <a href="#" class="f-soc">tg</a>
-        <a href="#" class="f-soc">in</a>
-        <a href="#" class="f-soc">✈</a>
+        <a href="https://t.me/GreedPig" class="f-soc"><!--<img class src="images/icon-telegram.png" alt="">--> tg</a>
+        <a href="https://www.instagram.com/_lepnina__cotedazur/" class="f-soc">📸</a>
+        <a href="#" class="f-soc">📞</a>
       </div>
     </div>
   </div>
   <div class="f-bot">
     <p>Gypsum & Façade Stucco Décor &nbsp;·&nbsp; © 2018–2026 Art de Gypse</p>
-    <a href="#">Made by GreedPig</a>
+    <a href="https://t.me/GreedPig">Made by GreedPig</a>
   </div>
 </footer>
 
@@ -1258,7 +1259,7 @@ function addToCartPDP(id){
   saveCart();
   toast(`${p.name} added to cart`,'success');
 }
-
+/*
 // ─── CART ─────────────────────────────────────────────────────────
 function addToCart(id, btn){
   const p=PRODUCTS.find(x=>x.id===id);
@@ -1336,7 +1337,7 @@ function applyCoupon(){
   else if(code==='SAVE20'){discount=.2;toast('Coupon applied: 20% off','success');}
   else{discount=0;toast('Invalid coupon code','error');}
   renderCartPanel();
-}
+} */
 
 // ─── WISHLIST ─────────────────────────────────────────────────────
 function toggleWish(id, btn){
