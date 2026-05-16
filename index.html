@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Art de Gypse — Premium Plaster Décor</title>
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -110,6 +111,7 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .prod-card:hover{box-shadow:var(--sh-h);transform:translateY(-4px)}
 .prod-badge{position:absolute;top:14px;left:14px;background:var(--gold);color:#fff;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:2px;z-index:2}
 .prod-img{aspect-ratio:1;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:50px;position:relative;overflow:hidden;cursor:pointer}
+.prod-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .prod-img-overlay{position:absolute;inset:0;background:rgba(0,0,0,.35);display:none;align-items:center;justify-content:center;gap:8px;flex-direction:column}
 .prod-img:hover .prod-img-overlay{display:flex}
 .prod-img-overlay button{background:rgba(255,255,255,.9);border:none;color:var(--char);padding:6px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background .2s}
@@ -193,6 +195,8 @@ button{font-family:'Jost',sans-serif;cursor:pointer}
 .pdp-thumbs{display:flex;gap:8px}
 .pdp-thumb{width:70px;height:70px;background:var(--sand);border-radius:4px;border:2px solid transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:24px;transition:border-color .2s}
 .pdp-thumb.active{border-color:var(--gold)}
+.pdp-imgs{aspect-ratio:1;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:50px;position:relative;overflow:hidden;cursor:pointer}
+.pdp-imgs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .pdp-info .price-big{font-size:36px;font-weight:500;margin:12px 0}
 .pdp-info .old-p{font-size:16px;color:var(--stone-l);text-decoration:line-through;margin-left:12px}
 .pdp-info .desc{font-size:14px;color:var(--stone);line-height:1.9;margin:20px 0}
@@ -1058,18 +1062,78 @@ const CATS = [
 
 // EUR prices (approx /40 from UAH)
 const PRODUCTS = [
-  {id:1,name:'Classic Cornice KC-105',cat:'cornices',price:12,oldPrice:16,icon:'🌿',badge:'Best Seller',desc:'Classic cornice in pure gypsum. Width 105mm, ideal for rooms with 2.7–3.5m ceilings. Available in any length.',specs:{Material:'Gypsum',Width:'105mm',Length:'2000mm',Weight:'1,8 kg/m','Finish':'Raw (paintable)'}} ,
-  {id:2,name:'Ceiling Medallion MD-32',cat:'medallions',price:32,icon:'⚜️',desc:'Decorative ceiling rose for chandeliers. Diameter 320mm. Classical floral motif.',specs:{Material:'Gypsum',Diameter:'320mm',Thickness:'18mm',Weight:'2,1 kg','Finish':'Raw (paintable)'}},
-  {id:3,name:'Pilaster PL-48',cat:'columns',price:80,oldPrice:100,icon:'🌿',badge:'-20%',desc:'Full decorative pilaster with capital and base. Height 2400mm, width 480mm.',specs:{Material:'Gypsum',Height:'2400mm',Width:'480mm',Weight:'28 kg','Finish':'Raw (paintable)'}},
-  {id:4,name:'Ceiling Rose RS-18',cat:'medallions',price:19,icon:'🏠',desc:'Small decorative ceiling rose for pendant lights. Diameter 180mm.',specs:{Material:'Gypsum',Diameter:'180mm',Thickness:'12mm',Weight:'0,9 kg','Finish':'Raw (paintable)'}},
-  {id:5,name:'Balustrade BL-22',cat:'balustrades',price:22,icon:'✨',badge:'New',desc:'Classical balustrade spindle. Height 220mm, for railings and balconies.',specs:{Material:'Gypsum',Height:'220mm',Diameter:'80mm',Weight:'1,4 kg','Finish':'Raw (paintable)'}},
-  {id:6,name:'Arch Frame NL-07',cat:'frames',price:52,icon:'🪟',badge:'New',desc:'Decorative arch surround for doorways. Width 70mm, custom lengths available.',specs:{Material:'Gypsum',Width:'70mm',Length:'Sur mesure',Weight:'2,2 kg/m','Finish':'Raw (paintable)'}},
-  {id:7,name:'Ionic Column KL-120',cat:'columns',price:310,icon:'🏛',badge:'New',desc:'Full ionic column set: shaft, capital and base. Height 1200mm.',specs:{Material:'Gypsum',Height:'1200mm',Diameter:'180mm',Weight:'65 kg','Finish':'Raw (paintable)'}},
-  {id:8,name:'Cartouche KT-15',cat:'facade',price:36,icon:'⚜️',badge:'New',desc:'Wall-mounted decorative cartouche. 350×220mm, for interiors and exteriors.',specs:{Material:'Gypsum',Size:'350×220mm',Thickness:'40mm',Weight:'2,8 kg','Finish':'Raw (paintable)'}},
-  {id:9,name:'Façade Cornice FC-200',cat:'facade',price:17,icon:'🏠',desc:'Weather-resistant façade cornice. Width 200mm, reinforced gypsum composite.',specs:{Material:'Reinforced gypsum',Width:'200mm',Length:'2000mm',Weight:'3,2 kg/m','Finish':'White primer'}},
-  {id:10,name:'Rosette Window Frame',cat:'frames',price:90,icon:'🪟',desc:'Circular window surround with rosette motif. Inner diameter 600mm.',specs:{Material:'Gypsum',Size:'800×800mm',Thickness:'55mm',Weight:'12 kg','Finish':'Raw (paintable)'}},
-  {id:11,name:'Modillion Block MB-12',cat:'cornices',price:8,icon:'🌿',desc:'Decorative bracket for cornice systems. 120×80×60mm.',specs:{Material:'Gypsum',Size:'120×80×60mm',Weight:'0,6 kg','Finish':'Raw (paintable)'}},
-  {id:12,name:'Balustrade Rail',cat:'balustrades',price:28,icon:'✨',desc:'Top and bottom rail for balustrade systems. Length 2000mm.',specs:{Material:'Gypsum',Length:'2000mm',Height:'80mm',Weight:'4,1 kg','Finish':'Raw (paintable)'}},
+  {id:1,name:'Classic Cornice KC-105',cat:'cornices',price:12,oldPrice:16,icon:'images/category/columns/cat-columns.png',badge:'Best Seller',desc:'Classic cornice in pure gypsum. Width 105mm, ideal for rooms with 2.7–3.5m ceilings. Available in any length.',specs:{Material:'Gypsum',Width:'105mm',Length:'2000mm',Weight:'1,8 kg/m','Finish':'Raw (paintable)'}} ,
+  {id:2,name:'Ceiling Medallion MD-32',cat:'medallions',price:32,icon:'images/category/',desc:'Decorative ceiling rose for chandeliers. Diameter 320mm. Classical floral motif.',specs:{Material:'Gypsum',Diameter:'320mm',Thickness:'18mm',Weight:'2,1 kg','Finish':'Raw (paintable)'}},
+  {id:3,name:'Pilaster PL-48',cat:'columns',price:80,oldPrice:100,icon:'images/category/',badge:'-20%',desc:'Full decorative pilaster with capital and base. Height 2400mm, width 480mm.',specs:{Material:'Gypsum',Height:'2400mm',Width:'480mm',Weight:'28 kg','Finish':'Raw (paintable)'}},
+  {id:4,name:'Ceiling Rose RS-18',cat:'medallions',price:19,icon:'images/category/',desc:'Small decorative ceiling rose for pendant lights. Diameter 180mm.',specs:{Material:'Gypsum',Diameter:'180mm',Thickness:'12mm',Weight:'0,9 kg','Finish':'Raw (paintable)'}},
+  {id:5,name:'Balustrade BL-22',cat:'balustrades',price:22,icon:'images/category/',badge:'New',desc:'Classical balustrade spindle. Height 220mm, for railings and balconies.',specs:{Material:'Gypsum',Height:'220mm',Diameter:'80mm',Weight:'1,4 kg','Finish':'Raw (paintable)'}},
+  {id:6,name:'Arch Frame NL-07',cat:'frames',price:52,icon:'images/frames1.png',badge:'New',desc:'Decorative arch surround for doorways. Width 70mm, custom lengths available.',specs:{Material:'Gypsum',Width:'70mm',Length:'Sur mesure',Weight:'2,2 kg/m','Finish':'Raw (paintable)'}},
+  {id:7,name:'Ionic Column KL-120',cat:'columns',price:310,icon:'images/category/',badge:'New',desc:'Full ionic column set: shaft, capital and base. Height 1200mm.',specs:{Material:'Gypsum',Height:'1200mm',Diameter:'180mm',Weight:'65 kg','Finish':'Raw (paintable)'}},
+  {id:8,name:'Cartouche KT-15',cat:'facade',price:36,icon:'images/category/',badge:'New',desc:'Wall-mounted decorative cartouche. 350×220mm, for interiors and exteriors.',specs:{Material:'Gypsum',Size:'350×220mm',Thickness:'40mm',Weight:'2,8 kg','Finish':'Raw (paintable)'}},
+  {id:9,name:'Façade Cornice FC-200',cat:'facade',price:17,icon:'images/category/',desc:'Weather-resistant façade cornice. Width 200mm, reinforced gypsum composite.',specs:{Material:'Reinforced gypsum',Width:'200mm',Length:'2000mm',Weight:'3,2 kg/m','Finish':'White primer'}},
+  {id:10,name:'Rosette Window Frame',cat:'frames',price:90,icon:'images/category/',desc:'Circular window surround with rosette motif. Inner diameter 600mm.',specs:{Material:'Gypsum',Size:'800×800mm',Thickness:'55mm',Weight:'12 kg','Finish':'Raw (paintable)'}},
+  {id:11,name:'Modillion Block MB-12',cat:'cornices',price:8,icon:'images/category/',desc:'Decorative bracket for cornice systems. 120×80×60mm.',specs:{Material:'Gypsum',Size:'120×80×60mm',Weight:'0,6 kg','Finish':'Raw (paintable)'}},
+  {id:12,name:'Balustrade Rail',cat:'balustrades',price:28,icon:'images/category/',desc:'Top and bottom rail for balustrade systems. Length 2000mm.',specs:{Material:'Gypsum',Length:'2000mm',Height:'80mm',Weight:'4,1 kg','Finish':'Raw (paintable)'}},
+  {id:13,name:'Decorative frames 9',cat:'frames',price:301,icon:'images/category/frames/frames9.png',desc:'',specs:{Material:'Gypsum',Length:'3250mm',Height:'2450mm',Weight:'','Finish':'Raw (paintable)'}},
+  {id:14,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:15,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:16,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:17,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:18,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:19,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:20,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:21,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:22,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:23,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:24,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:25,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:26,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:27,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:28,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:29,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:30,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:31,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:32,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:33,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:34,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:35,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:36,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:37,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:38,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:39,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:40,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:41,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:42,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:43,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:44,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:45,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:46,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:47,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:48,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:49,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:50,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:51,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:52,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:53,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:54,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:55,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:56,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:57,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:58,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:59,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:60,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:61,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:62,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:63,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:64,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:65,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:66,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:67,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:68,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:69,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:70,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:71,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
+  {id:72,name:'',cat:'',price:0,icon:'images/category/',desc:'',specs:{Material:'',Length:'',Height:'',Weight:'','Finish':'Raw (paintable)'}},
 ];
 
 const NEWS = [
@@ -1161,7 +1225,7 @@ function prodCardHTML(p){
     ${p.badge?`<span class="prod-badge">${p.badge}</span>`:''}
     <button class="wish-btn${inW?' active':''}" onclick="toggleWish(${p.id},this)" title="Favoris">${inW?'♥':'♡'}</button>
     <div class="prod-img" onclick="openProduct(${p.id})">
-      <span>${p.icon}</span>
+      <img src=${p.icon} alt=""></img>
       <div class="prod-img-overlay">
         <button onclick="event.stopPropagation();openProduct(${p.id})">Quick View</button>
       </div>
@@ -1211,9 +1275,9 @@ function openProduct(id){
     `<a href="#" onclick="nav('home');return false">Home</a> <span>/ <a href="#" onclick="nav('catalog');return false">Catalogue</a></span> <span>/ ${p.name}</span>`;
   document.getElementById('pdp-content').innerHTML=`
     <div class="pdp-imgs">
-      <div class="pdp-main-img" style="font-size:80px">${p.icon}</div>
+      <div class="pdp-main-img" style="font-size:80px"><img src=${p.icon}></img></div>
       <div class="pdp-thumbs">
-        <div class="pdp-thumb active"><span style="font-size:24px">${p.icon}</span></div>
+        <div class="pdp-thumb active"><img src=${p.icon}></img></div>
       </div>
     </div>
     <div class="pdp-info">
