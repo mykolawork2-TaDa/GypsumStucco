@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "products"
+    label: "Товари"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Назва", name: "title", widget: "string" }
+      - { label: "Ціна", name: "price", widget: "number" }
+      - { label: "Фото", name: "image", widget: "image" }
+      - { label: "Опис", name: "body", widget: "markdown" }
+      - { label: "Категорія", name: "category", widget: "select",
+          options: ["електроніка", "одяг", "меблі"] }
+
+  - name: "news"
+    label: "Новини"
+    folder: "content/news"
+    create: true
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Обкладинка", name: "cover", widget: "image" }
+      - { label: "Текст", name: "body", widget: "markdown" }
+
+  - name: "portfolio"
+    label: "Портфоліо"
+    folder: "content/portfolio"
+    create: true
+    fields:
+      - { label: "Назва проєкту", name: "title", widget: "string" }
+      - { label: "Клієнт", name: "client", widget: "string" }
+      - { label: "Фото", name: "image", widget: "image" }
+      - { label: "Опис", name: "body", widget: "markdown" }
+      - { label: "Посилання", name: "url", widget: "string",
+          required: false }
