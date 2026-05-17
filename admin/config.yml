@@ -3,7 +3,7 @@ backend:
   branch: main
 
 # Де зберігати завантажені зображення
-media_folder: "public/images/uploads"
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 # Формат збереження — JSON
@@ -19,7 +19,7 @@ collections:
     files:
       - name: "products"
         label: "Список товарів"
-        file: "public/data/products.json"
+        file: "data/products.json"
         fields:
           - label: "Товари"
             name: "items"
@@ -64,7 +64,7 @@ collections:
     files:
       - name: "news"
         label: "Список новин"
-        file: "public/data/news.json"
+        file: "data/news.json"
         fields:
           - label: "Новини"
             name: "items"
@@ -74,7 +74,7 @@ collections:
               - { label: "Заголовок",   name: "title",   widget: "string" }
               - { label: "Дата",        name: "date",    widget: "string", hint: "Наприклад: April 12, 2026" }
               - { label: "Анонс",       name: "excerpt", widget: "text" }
-              - label: "Іконка (emoji)"
+              - { label: "Фото товару", name: "icon",    widget: "image" }
                 name: "icon"
                 widget: "select"
                 options: ["🏠","🎉","🏛","🤝","📐","🔧","✨","🌿","⚜️","🪟","🏗","📦"]
@@ -89,7 +89,7 @@ collections:
     files:
       - name: "gallery"
         label: "Фото галереї"
-        file: "public/data/gallery.json"
+        file: "data/gallery.json"
         fields:
           - label: "Елементи галереї"
             name: "items"
