@@ -1,42 +1,84 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: git-gateway        # використовує Netlify Git Gateway
+  branch: main             # яка гілка — main або master
 
+# Де зберігати завантажені зображення
 media_folder: "public/images/uploads"
+# Який публічний шлях підставляти в контент
 public_folder: "/images/uploads"
 
+# Мова інтерфейсу (опційно)
+locale: uk
+
 collections:
+
+  # ───── ТОВАРИ ─────
   - name: "products"
     label: "Товари"
+    label_singular: "Товар"
     folder: "content/products"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { label: "Назва",        name: "title",    widget: "string" }
+      - { label: "Ціна (грн)",   name: "price",    widget: "number" }
+      - { label: "Артикул",      name: "sku",      widget: "string", required: false }
+      - label: "Категорія"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Електроніка", value: "electronics" }
+          - { label: "Одяг",        value: "clothing" }
+          - { label: "Меблі",       value: "furniture" }
+      - { label: "Головне фото", name: "image",    widget: "image" }
+      - label: "Галерея"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field: { label: "Фото", name: "photo", widget: "image" }
+      - { label: "Опис",         name: "body",     widget: "markdown" }
+      - { label: "В наявності",  name: "inStock",  widget: "boolean", default: true }
+      - { label: "На головній",  name: "featured", widget: "boolean", default: false }
+
+  # ───── НОВИНИ ─────
+  - name: "news"
+    label: "Новини"
+    label_singular: "Новина"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Заголовок",  name: "title",  widget: "string" }
+      - { label: "Дата",       name: "date",   widget: "datetime" }
+      - { label: "Обкладинка", name: "cover",  widget: "image", required: false }
+      - { label: "Анонс",      name: "excerpt",widget: "text" }
+      - { label: "Текст",      name: "body",   widget: "markdown" }
+      - label: "Теги"
+        name: "tags"
+        widget: "list"
+        required: false
+        field: { label: "Тег", name: "tag", widget: "string" }
+
+  # ───── ПОРТФОЛІО ─────
+  - name: "portfolio"
+    label: "Портфоліо"
+    label_singular: "Проєкт"
+    folder: "content/portfolio"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Назва", name: "title", widget: "string" }
-      - { label: "Ціна", name: "price", widget: "number" }
-      - { label: "Фото", name: "image", widget: "image" }
-      - { label: "Опис", name: "body", widget: "markdown" }
-      - { label: "Категорія", name: "category", widget: "select",
-          options: ["електроніка", "одяг", "меблі"] }
-
-  - name: "news"
-    label: "Новини"
-    folder: "content/news"
-    create: true
-    fields:
-      - { label: "Заголовок", name: "title", widget: "string" }
-      - { label: "Дата", name: "date", widget: "datetime" }
-      - { label: "Обкладинка", name: "cover", widget: "image" }
-      - { label: "Текст", name: "body", widget: "markdown" }
-
-  - name: "portfolio"
-    label: "Портфоліо"
-    folder: "content/portfolio"
-    create: true
-    fields:
-      - { label: "Назва проєкту", name: "title", widget: "string" }
-      - { label: "Клієнт", name: "client", widget: "string" }
-      - { label: "Фото", name: "image", widget: "image" }
-      - { label: "Опис", name: "body", widget: "markdown" }
-      - { label: "Посилання", name: "url", widget: "string",
-          required: false }
+      - { label: "Назва проєкту", name: "title",  widget: "string" }
+      - { label: "Клієнт",        name: "client", widget: "string" }
+      - { label: "Рік",           name: "year",   widget: "number" }
+      - { label: "Головне фото",  name: "image",  widget: "image" }
+      - label: "Галерея"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field: { label: "Фото", name: "photo", widget: "image" }
+      - { label: "Опис",          name: "body",   widget: "markdown" }
+      - { label: "Посилання",     name: "url",    widget: "string", required: false }
+      - label: "Категорія"
+        name: "category"
+        widget: "select"
+        options: ["веб-сайт", "мобільний застосунок", "брендинг", "інше"]

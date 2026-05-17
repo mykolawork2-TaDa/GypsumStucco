@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Art de Gypse — Premium Plaster Décor</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -1741,6 +1742,16 @@ function toast(msg,type='info'){
   t.textContent=msg;
   w.appendChild(t);
   setTimeout(()=>{t.style.opacity='0';t.style.transition='opacity .4s';setTimeout(()=>t.remove(),400);},3000);
+}
+
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────
