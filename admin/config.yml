@@ -74,7 +74,7 @@ collections:
               - { label: "Заголовок",   name: "title",   widget: "string" }
               - { label: "Дата",        name: "date",    widget: "string", hint: "Наприклад: April 12, 2026" }
               - { label: "Анонс",       name: "excerpt", widget: "text" }
-              - { label: "Фото товару", name: "icon",    widget: "image" }
+              - label: "Іконка (emoji)"
                 name: "icon"
                 widget: "select"
                 options: ["🏠","🎉","🏛","🤝","📐","🔧","✨","🌿","⚜️","🪟","🏗","📦"]
