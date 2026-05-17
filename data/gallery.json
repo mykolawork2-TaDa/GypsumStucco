@@ -1,0 +1,13 @@
+{
+  "items": [
+    { "icon": "🏛", "cat": "interior", "label": "Living room columns — Paris" },
+    { "icon": "🌿", "cat": "interior", "label": "Cornice installation — Lyon" },
+    { "icon": "🏠", "cat": "exterior", "label": "Façade décor — Nice" },
+    { "icon": "⚜️", "cat": "interior", "label": "Ceiling medallion — Bordeaux" },
+    { "icon": "✨", "cat": "exterior", "label": "Balustrade terrace — Marseille" },
+    { "icon": "🪟", "cat": "custom",   "label": "Custom arch frames — Toulouse" },
+    { "icon": "🏛", "cat": "exterior", "label": "Column portico — Strasbourg" },
+    { "icon": "🌿", "cat": "interior", "label": "Dining room cornice — Paris" },
+    { "icon": "⚜️", "cat": "custom",   "label": "Bespoke ceiling — Nantes" }
+  ]
+}

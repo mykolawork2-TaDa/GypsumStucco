@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Cornice k-337",
+      "cat": "cornices",
+      "price": 29,
+      "icon": "images/category/cornices/cornicesK-337.png",
+      "desc": "Elegant gypsum cornices with ready-made corner elements are a perfect solution for creating a refined and seamless interior design. Their precise shapes and smooth transitions simplify installation while adding sophistication and architectural character to any space.",
+      "specs": { "Material": "Gypsum", "Width": "100mm", "Length": "810mm", "Height": "100mm", "Finish": "Raw (paintable)" }
+    },
+    {
+      "id": 25,
+      "name": "Cornice k-86",
+      "cat": "cornices",
+      "price": 12,
+      "icon": "images/category/cornices/cornicesK-86.png",
+      "desc": "Gypsum cornices are a timeless decorative element that adds elegance and depth to any interior.",
+      "specs": { "Material": "Gypsum", "Width": "60mm", "Length": "577mm", "Height": "85mm", "Finish": "Raw (paintable)" }
+    },
+    {
+      "id": 26,
+      "name": "Cornice k-84",
+      "cat": "cornices",
+      "price": 13,
+      "icon": "images/category/cornices/cornicesK-84.png",
+      "desc": "Gypsum cornices are a timeless decorative element that adds elegance and depth to any interior.",
+      "specs": { "Material": "Gypsum", "Width": "40mm", "Length": "800mm", "Height": "100mm", "Finish": "Raw (paintable)" }
+    },
+    {
+      "id": 27,
+      "name": "Cornice k-83",
+      "cat": "cornices",
+      "price": 7,
+      "icon": "images/category/cornices/cornicesK-83.png",
+      "desc": "Gypsum cornices are a timeless decorative element that adds elegance and depth to any interior.",
+      "specs": { "Material": "Gypsum", "Width": "12mm", "Length": "275mm", "Height": "17mm", "Finish": "Raw (paintable)" }
+    },
+    {
+      "id": 62,
+      "name": "Decorative Frame 9",
+      "cat": "frames",
+      "price": 606,
+      "icon": "images/category/frames/frames9.png",
+      "desc": "Gypsum decorative frames are an elegant interior solution that adds sophistication and character to walls and ceilings.",
+      "specs": { "Material": "Gypsum", "Length": "3250mm", "Height": "2450mm", "Finish": "Raw (paintable)" }
+    },
+    {
+      "id": 63,
+      "name": "Decorative Frame 8",
+      "cat": "frames",
+      "price": 835,
+      "icon": "images/category/frames/frames8.png",
+      "desc": "Gypsum decorative frames are an elegant interior solution that adds sophistication and character to walls and ceilings.",
+      "specs": { "Material": "Gypsum", "Length": "3800mm", "Height": "2600mm", "Finish": "Raw (paintable)" }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "title": "New Riviera Façade Collection Launched",
+      "date": "April 12, 2026",
+      "excerpt": "Our stunning new exterior collection draws inspiration from Mediterranean architecture. 47 new products now available.",
+      "icon": "🏠"
+    },
+    {
+      "title": "Spring Sale — Up to 30% Off Selected Items",
+      "date": "March 28, 2026",
+      "excerpt": "Limited-time discounts on our most popular interior décor pieces. Order before May 1st.",
+      "icon": "🎉"
+    },
+    {
+      "title": "New Showroom Opens in Paris",
+      "date": "March 5, 2026",
+      "excerpt": "Visit our brand-new 400m² showroom at 15 Avenue des Champs-Élysées to see the full range in person.",
+      "icon": "🏛"
+    },
+    {
+      "title": "Wholesale Partnership Programme",
+      "date": "February 14, 2026",
+      "excerpt": "We are expanding our partner network. Special pricing for architects, builders and interior designers.",
+      "icon": "🤝"
+    },
+    {
+      "title": "How to Choose the Right Cornice",
+      "date": "January 22, 2026",
+      "excerpt": "Expert guide to selecting cornice proportions for different room heights and architectural styles.",
+      "icon": "📐"
+    },
+    {
+      "title": "Installation Workshop — Paris",
+      "date": "January 8, 2026",
+      "excerpt": "Free hands-on installation workshop for professionals. Register now — limited places available.",
+      "icon": "🔧"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Де зберігати завантажені зображення
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# Формат збереження — JSON
+# (за замовчуванням yaml, але нам потрібен json)
+
+collections:
+
+  # ─────────────────────────────────────────────
+  # ТОВАРИ
+  # ─────────────────────────────────────────────
+  - name: "products_file"
+    label: "Товари (Products)"
+    files:
+      - name: "products"
+        label: "Список товарів"
+        file: "public/data/products.json"
+        fields:
+          - label: "Товари"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.price}} €"
+            fields:
+              - { label: "ID (унікальне число)",  name: "id",       widget: "number", value_type: "int" }
+              - { label: "Назва",                  name: "name",     widget: "string" }
+              - label: "Категорія"
+                name: "cat"
+                widget: "select"
+                options:
+                  - { label: "Columns",     value: "columns" }
+                  - { label: "Cornices",    value: "cornices" }
+                  - { label: "Medallions",  value: "medallions" }
+                  - { label: "Frames",      value: "frames" }
+                  - { label: "Façade",      value: "facade" }
+                  - { label: "Balustrades", value: "balustrades" }
+              - { label: "Ціна (€)",               name: "price",    widget: "number", value_type: "float" }
+              - { label: "Стара ціна (€, опційно)", name: "oldPrice", widget: "number", value_type: "float", required: false }
+              - { label: "Фото товару",             name: "icon",     widget: "image" }
+              - { label: "Опис",                    name: "desc",     widget: "text" }
+              - label: "Бейдж (New / Sale, опційно)"
+                name: "badge"
+                widget: "string"
+                required: false
+              - label: "Характеристики"
+                name: "specs"
+                widget: "object"
+                fields:
+                  - { label: "Матеріал",  name: "Material", widget: "string", default: "Gypsum" }
+                  - { label: "Ширина",    name: "Width",    widget: "string", required: false }
+                  - { label: "Довжина",   name: "Length",   widget: "string", required: false }
+                  - { label: "Висота",    name: "Height",   widget: "string", required: false }
+                  - { label: "Оздоблення",name: "Finish",   widget: "string", default: "Raw (paintable)" }
+
+  # ─────────────────────────────────────────────
+  # НОВИНИ
+  # ─────────────────────────────────────────────
+  - name: "news_file"
+    label: "Новини (News)"
+    files:
+      - name: "news"
+        label: "Список новин"
+        file: "public/data/news.json"
+        fields:
+          - label: "Новини"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Заголовок",   name: "title",   widget: "string" }
+              - { label: "Дата",        name: "date",    widget: "string", hint: "Наприклад: April 12, 2026" }
+              - { label: "Анонс",       name: "excerpt", widget: "text" }
+              - label: "Іконка (emoji)"
+                name: "icon"
+                widget: "select"
+                options: ["🏠","🎉","🏛","🤝","📐","🔧","✨","🌿","⚜️","🪟","🏗","📦"]
+                default: "🏠"
+              - { label: "Фото (опційно)", name: "image", widget: "image", required: false }
+
+  # ─────────────────────────────────────────────
+  # ГАЛЕРЕЯ
+  # ─────────────────────────────────────────────
+  - name: "gallery_file"
+    label: "Галерея (Gallery)"
+    files:
+      - name: "gallery"
+        label: "Фото галереї"
+        file: "public/data/gallery.json"
+        fields:
+          - label: "Елементи галереї"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Підпис",     name: "label",  widget: "string" }
+              - label: "Категорія"
+                name: "cat"
+                widget: "select"
+                options:
+                  - { label: "Interior", value: "interior" }
+                  - { label: "Exterior", value: "exterior" }
+                  - { label: "Custom",   value: "custom" }
+              - { label: "Фото",        name: "image",  widget: "image" }
+              - label: "Іконка (emoji, запасна якщо немає фото)"
+                name: "icon"
+                widget: "select"
+                options: ["🏛","🌿","🏠","⚜️","✨","🪟","🏗"]
+                default: "🏛"
