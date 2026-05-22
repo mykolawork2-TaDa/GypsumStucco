@@ -1227,7 +1227,7 @@
       }
     },
     {
-      "oldPrice": 19,
+      "oldPrice": 20,
       "badge": "-50%",
       "price": 10,
       "name": "test",
@@ -1236,11 +1236,11 @@
       "specs": {
         "Material": "Gypsum",
         "Finish": "Raw (paintable)",
-        "Width": "hui",
-        "Length": "pisun",
-        "Height": "vagina"
+        "Width": "test",
+        "Length": "test",
+        "Height": "test"
       },
-      "icon": "/images/uploads/5255753516385956052.jpg",
+      "icon": "/images/uploads/chatgpt-image-26-квіт.-2026-р.-02_00_46.png",
       "id": 83
     }
   ]
