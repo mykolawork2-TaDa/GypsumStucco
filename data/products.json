@@ -1225,6 +1225,20 @@
         "Weight": "",
         "Finish": "Raw (paintable)"
       }
+    },
+    {
+      "oldPrice": "",
+      "badge": "",
+      "price": 10,
+      "name": "test",
+      "desc": "testtset tsting",
+      "cat": "columns",
+      "specs": {
+        "Material": "Gypsum",
+        "Finish": "Raw (paintable)"
+      },
+      "icon": "/images/uploads/5255753516385956052.jpg",
+      "id": 83
     }
   ]
 }
